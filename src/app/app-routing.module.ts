@@ -5,13 +5,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'image/upload', pathMatch: 'full' },
+  
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },
       { path: 'list', component: ImageListComponent }
     ]
-  }
+  },
+  
 ];
 
 @NgModule({
