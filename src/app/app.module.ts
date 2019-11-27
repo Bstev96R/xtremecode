@@ -12,6 +12,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
   import { from } from 'rxjs';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     ImagesComponent,
     ImageComponent,
-    ImageListComponent
+    ImageListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
