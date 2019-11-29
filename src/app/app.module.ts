@@ -11,10 +11,10 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
-  import { from } from 'rxjs';
+import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './Login/login.component';
-import { RegistroComponent } from './registro/registro.component';
+import { RegistroComponent } from './Registro/registro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
