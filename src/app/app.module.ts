@@ -13,6 +13,9 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
   import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './Login/login.component';
+import { RegistroComponent } from './registro/registro.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     ImagesComponent,
     ImageComponent,
     ImageListComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    BrowserAnimationsModule
     
   ],
   providers: [],
