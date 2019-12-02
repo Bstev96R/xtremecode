@@ -17,7 +17,7 @@ export const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'registrar', component: RegisterComponent
+    path: 'register', component: RegisterComponent
   },
   {
     path: 'image', component: ImagesComponent, children: [
