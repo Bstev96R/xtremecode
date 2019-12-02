@@ -1,5 +1,6 @@
 a{
     text-decoration: none;
+    font-family: sans-serif;
 
 
 }
@@ -8,6 +9,7 @@ a{
     font-size: 30px;
     background-color:#81c784;
     font-size: 30px;
+    
 }
 img{
     width: 150px;
