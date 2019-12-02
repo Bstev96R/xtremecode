@@ -14,6 +14,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { RegistroComponent} from './registro/registro.component';
+import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ImageComponent,
     ImageListComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    RegistroComponent,
+    LoginComponent
     
   ],
   imports: [

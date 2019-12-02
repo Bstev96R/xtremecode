@@ -3,18 +3,14 @@ a{
 
 
 }
-.tab:hover{
-font-size: 30px;
 
-background-color:#81c784;
-
-
-}
-a:hover{
+#home:hover{
     font-size: 30px;
     background-color:#81c784;
+    font-size: 30px;
 }
 img{
-    width: 100px;
+    width: 150px;
+    margin-left: 2%;
 
 }
