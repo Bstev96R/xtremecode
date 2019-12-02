@@ -13,6 +13,8 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
   import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,14 +23,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     ImagesComponent,
     ImageComponent,
     ImageListComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,    
+
     AngularFireModule.initializeApp(environment.firebaseConfig)
     
   ],
