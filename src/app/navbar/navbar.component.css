@@ -11,6 +11,11 @@ a{
 }
 img{
     width: 150px;
-    margin-left: 2%;
+    margin-left: 45%;
+    position: absolute;
+    
 
+}
+img:hover{
+    background-color:#81c784 ;
 }
