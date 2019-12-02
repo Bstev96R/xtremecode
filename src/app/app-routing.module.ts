@@ -7,6 +7,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import {RazaComponent} from './raza/raza.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import { FooterComponent } from './footer/footer.component';
+import { from } from 'rxjs';
 
 
 export const routes: Routes = [
@@ -24,6 +26,10 @@ export const routes: Routes = [
   },
   {
     path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'footer', component: FooterComponent
+
   },
   {
     path: 'image', component: ImagesComponent, children: [

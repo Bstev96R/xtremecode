@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RazaComponent } from './raza/raza.component';
 import { RegisterComponent } from './register/register.component';
+import {FooterComponent} from './footer/footer.component'
 
 
 
@@ -32,11 +33,9 @@ import { RegisterComponent } from './register/register.component';
     ImageListComponent,
     NavbarComponent,
     CarouselComponent,
-    
+    FooterComponent,
     LoginComponent,
     RazaComponent,
-    
-  
     RegisterComponent
     
   ],
