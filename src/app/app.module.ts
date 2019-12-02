@@ -15,11 +15,12 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { RegistroComponent} from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RazaComponent } from './raza/raza.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 
@@ -31,9 +32,12 @@ import { RazaComponent } from './raza/raza.component';
     ImageListComponent,
     NavbarComponent,
     CarouselComponent,
-    RegistroComponent,
+    
     LoginComponent,
-    RazaComponent
+    RazaComponent,
+    
+  
+    RegisterComponent
     
   ],
   imports: [

@@ -5,6 +5,9 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
 import {RazaComponent} from './raza/raza.component';
+import {LoginComponent} from './login/login.component';
+import {RegisterComponent} from './register/register.component';
+
 
 export const routes: Routes = [
   
@@ -16,12 +19,16 @@ export const routes: Routes = [
     path: 'raza', component: RazaComponent 
     
   },
-  
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'register', component: RegisterComponent
+  },
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },
-      { path: 'list', component: ImageListComponent },
-      
+      { path: 'list', component: ImageListComponent }      
     ]
   }
   
