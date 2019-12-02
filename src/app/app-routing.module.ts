@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
 import {LoginComponent} from './login/login.component';
 
+
 export const routes: Routes = [
   
   {
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {
     path: 'login', component: LoginComponent
   },
+
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },
