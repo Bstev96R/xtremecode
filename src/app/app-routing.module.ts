@@ -5,6 +5,7 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
 import {LoginComponent} from './login/login.component';
+import {RegisterComponent} from './register/register.component';
 
 
 export const routes: Routes = [
@@ -15,7 +16,9 @@ export const routes: Routes = [
   {
     path: 'login', component: LoginComponent
   },
-
+  {
+    path: 'registrar', component: RegisterComponent
+  },
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },
