@@ -19,6 +19,7 @@ import { RegistroComponent} from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RazaComponent } from './raza/raza.component';
 
 
 
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     CarouselComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    RazaComponent
     
   ],
   imports: [

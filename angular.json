@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "ImageGalleryAngularWithFirebase": {
-      "root": "e2e/",
+      "root": "e2e",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",

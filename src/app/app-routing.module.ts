@@ -4,12 +4,19 @@ import { ImagesComponent } from './images/images.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
+import {RazaComponent} from './raza/raza.component';
 
 export const routes: Routes = [
   
   {
     path: 'carousel', component: CarouselComponent
+    
   },
+  {
+    path: 'raza', component: RazaComponent 
+    
+  },
+  
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },
