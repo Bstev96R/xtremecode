@@ -22,6 +22,10 @@ import { RazaComponent } from './raza/raza.component';
 import { RegisterComponent } from './register/register.component';
 import {FooterComponent} from './footer/footer.component'
 import {CuerpoComponent} from './cuerpo/cuerpo.component';
+import {CaracteristicasComponent} from './caracteristicas/caracteristicas.component';
+import {AddCaracteristicasComponent} from './add-caracteristicas/add-caracteristicas.component';
+
+  import { from } from "rxjs";
 
 
 
@@ -37,7 +41,10 @@ import {CuerpoComponent} from './cuerpo/cuerpo.component';
     LoginComponent,
     RazaComponent,
     RegisterComponent,
-    CuerpoComponent
+    CuerpoComponent,
+    AddCaracteristicasComponent,
+    CaracteristicasComponent
+
     
   ],
   imports: [
