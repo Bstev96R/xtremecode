@@ -46,7 +46,6 @@ import {PerfilComponent} from './perfil/perfil.component';
     CuerpoComponent,
     AddCaracteristicasComponent,
     CaracteristicasComponent,
-
     PerfilComponent
     
   ],

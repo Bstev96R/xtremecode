@@ -24,10 +24,11 @@ export class LoginComponent implements OnInit {
   }
 
   onLogoutGoogle() {
-    this.afAuth.auth.signOut();
+    this.afAuth.auth.signOut(new auth.GoogleAuthProvider());
   }
 
   onLoginFacebook(){
     this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
 }
+
