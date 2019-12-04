@@ -8,7 +8,7 @@ import {RazaComponent} from './raza/raza.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
-import { from } from 'rxjs';
+import { CuerpoComponent } from './cuerpo/cuerpo.component';
 
 
 export const routes: Routes = [
@@ -29,6 +29,10 @@ export const routes: Routes = [
   },
   {
     path: 'footer', component: FooterComponent
+
+  },
+  {
+    path: 'cuerpo' , component: CuerpoComponent
 
   },
   {

@@ -12,7 +12,7 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
-import { from } from 'rxjs';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RazaComponent } from './raza/raza.component';
 import { RegisterComponent } from './register/register.component';
 import {FooterComponent} from './footer/footer.component'
-
+import {CuerpoComponent} from './cuerpo/cuerpo.component';
 
 
 
@@ -36,7 +36,8 @@ import {FooterComponent} from './footer/footer.component'
     FooterComponent,
     LoginComponent,
     RazaComponent,
-    RegisterComponent
+    RegisterComponent,
+    CuerpoComponent
     
   ],
   imports: [
