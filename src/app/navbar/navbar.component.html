@@ -3,11 +3,11 @@
     <a><img id="logo" src="../../assets/img/Suga-Logo copy2.png"/></a>
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li *ngIf="!isLogged">
+      <li>
         <a id="home" routerLink="/image/list" >Subasta</a>
       </li>
       <li><a id="home">Oferta individual</a></li>
-      <li><a id="home" routerLink="/login">Login</a></li>
+      <li *ngIf="!isLogged"><a id="home" routerLink="/login">Login</a></li>
       <li><a id="home">perfil</a></li>
       <li><a id="home">Cerrar sesion</a></li>
       <a class="waves-effect waves-light btn pulse"><i class="material-icons left">add_to_photos</i>Publicar evento</a>

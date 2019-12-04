@@ -26,6 +26,8 @@ import {CaracteristicasComponent} from './caracteristicas/caracteristicas.compon
 import {AddCaracteristicasComponent} from './add-caracteristicas/add-caracteristicas.component';
 
   import { from } from "rxjs";
+import {AngularFireAuth} from '@angular/fire/auth';
+import {PerfilComponent} from './perfil/perfil.component';
 
 
 
@@ -43,8 +45,9 @@ import {AddCaracteristicasComponent} from './add-caracteristicas/add-caracterist
     RegisterComponent,
     CuerpoComponent,
     AddCaracteristicasComponent,
-    CaracteristicasComponent
+    CaracteristicasComponent,
 
+    PerfilComponent
     
   ],
   imports: [
@@ -61,7 +64,7 @@ import {AddCaracteristicasComponent} from './add-caracteristicas/add-caracterist
     AngularFireModule.initializeApp(environment.firebaseConfig)
     
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
