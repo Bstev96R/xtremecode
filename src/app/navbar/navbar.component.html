@@ -1,24 +1,27 @@
-
 <nav class="nav-extended " style="background-color: rgba(0,0,0, 0.7);">
-    <div class="nav-wrapper">
-      <a><img id="logo" src="../../assets/img/Suga-Logo copy2.png"></a>
-      
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a id="home"  routerLink='/image/list' >Subasta</a></li>
-        <li><a id="home" >Oferta individual</a></li>
-        <li><a id="home"  routerLink='/login'>Login</a></li>
-        <li><a id="home">perfil</a></li>
-        <li><a id="home">Cerrar sesion</a></li>
-      </ul>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"  routerLink='/carousel'><a class="hoverable" id="home" >Inicio</a></li>
-        <li class="tab"><a class="hoverable" id="home">compañia</a></li>
-        <li class="tab " routerLink='/raza'><a class="hoverable" id="home">Galeria</a></li>
-        <li class="tab"><a class="hoverable" id="home">Productos</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="nav-wrapper">
+    <a><img id="logo" src="../../assets/img/Suga-Logo copy2.png"/></a>
 
-  
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li *ngIf="!isLogged">
+        <a id="home" routerLink="/image/list" >Subasta</a>
+      </li>
+      <li><a id="home">Oferta individual</a></li>
+      <li><a id="home" routerLink="/login">Login</a></li>
+      <li><a id="home">perfil</a></li>
+      <li><a id="home">Cerrar sesion</a></li>
+    </ul>
+  </div>
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab" routerLink="/carousel">
+        <a class="hoverable" id="home">Inicio</a>
+      </li>
+      <li class="tab"><a class="hoverable" id="home">compañia</a></li>
+      <li class="tab " routerLink="/raza">
+        <a class="hoverable" id="home">Galeria</a>
+      </li>
+      <li class="tab"><a class="hoverable" id="home">Productos</a></li>
+    </ul>
+  </div>
+</nav>
