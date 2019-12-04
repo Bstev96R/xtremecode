@@ -7,30 +7,31 @@
               <img [src]="imgSrc" width="350px" height="250px" (click)="fileUploader.click()">
             </div>
             <div class="form-group">
-              <label>Select file to upload</label>
+              <label>Seleccionar Archivo</label>
               <input type="file" accept="image/*" class="form-control" #fileUploader formControlName="imageUrl"
                 (change)="showPreview($event)">
-              <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required.
+              <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">Campo requerido
               </div>
             </div>
             <div class="form-group">
               <input class="form-control" formControlName="caption" placeholder="Caption">
-              <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required.
+              <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">campo requerido
               </div>
             </div>
             <div class="form-group">
               <select formControlName="category" class="form-control">
-                <option value="Animal">Animal</option>
-                <option value="Vehicle">Vehicle</option>
-                <option value="Bird">Bird</option>
+                <option value="menor a 8 meses">Ternero o ternera</option>
+                <option value="6 0 18 meses">vaquilla o torillo</option>
+                <option value="19 a 30 meses">vaquillota o torete</option>
+                <option value="mayor a 30 meses">vaca o toro</option>
               </select>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <a routerLink="/image/list" class="btn btn-primary btn-block float-right">Go To Gallery</a>
+                <a routerLink="/image/list" class="btn btn-primary btn-block float-right">ver Galeria</a>
               </div>
               <div class="form-group col-md-6">
-                <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+                <button type="submit" class="btn btn-success btn-block float-right">Guardar</button>
               </div>
             </div>
           </form>

@@ -70,7 +70,7 @@ export class ImageComponent implements OnInit {
     this.formTemplate.setValue({
       caption: '',
       imageUrl: '',
-      category: 'Animal'
+      category: 'ternero o ternera'
     });
     this.imgSrc = '/assets/img/image_placeholder.jpg';
     this.selectedImage = null;
