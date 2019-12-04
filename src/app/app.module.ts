@@ -22,6 +22,8 @@ import { RazaComponent } from './raza/raza.component';
 import { RegisterComponent } from './register/register.component';
 import {FooterComponent} from './footer/footer.component'
 import {CuerpoComponent} from './cuerpo/cuerpo.component';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {PerfilComponent} from './perfil/perfil.component';
 
 
 
@@ -37,7 +39,8 @@ import {CuerpoComponent} from './cuerpo/cuerpo.component';
     LoginComponent,
     RazaComponent,
     RegisterComponent,
-    CuerpoComponent
+    CuerpoComponent,
+    PerfilComponent
     
   ],
   imports: [
@@ -54,7 +57,7 @@ import {CuerpoComponent} from './cuerpo/cuerpo.component';
     AngularFireModule.initializeApp(environment.firebaseConfig)
     
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
