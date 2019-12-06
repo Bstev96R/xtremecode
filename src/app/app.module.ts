@@ -47,7 +47,6 @@ import {CaracteristicasService} from './services/caracteristicas.service';
     CuerpoComponent,
     AddCaracteristicasComponent,
     CaracteristicasComponent,
-
     PerfilComponent
     
   ],
