@@ -13,6 +13,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -60,8 +61,8 @@ import {CaracteristicasService} from './services/caracteristicas.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
     ReactiveFormsModule, 
-    AngularFirestoreModule,   
-
+    AngularFirestoreModule,  
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
     
   ],

@@ -10,6 +10,7 @@ import {RegisterComponent} from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { AddCaracteristicasComponent } from './add-caracteristicas/add-caracteristicas.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,9 @@ export const routes: Routes = [
   {
     path: 'cuerpo' , component: CuerpoComponent
 
+  },
+  {
+    path:'registroB', component: AddCaracteristicasComponent
   },
   {
     path: 'image', component: ImagesComponent, children: [
