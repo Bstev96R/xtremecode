@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import {AngularFireAuth} from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Router } from '@angular/router';
+import {AuthService} from '../services/auth.service';
+import { NgForm } from '@angular/forms/src/directives/ng_form';
 
 
 @Component({
@@ -12,19 +13,36 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public afAuth: AngularFireAuth, private route: Router) {
+  constructor(public afAuth: AngularFireAuth, private route: Router, private authService: AuthService) {
 
    }
+
+   public email : "";
+   public password : "";
   ngOnInit() {
   }
 
-  onLoginGoogle() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  onLogin(): void {
+    console.log('email', this.email);
+    console.log('password', this.password);
+
+    /*this.authService.RegisterUser(this.email, this.password)
+    .then((res)=> {
+      this.route.navigate(['perfil']);
+    }).catch(err => console.log('err', err.message));*/
+  }
+
+  onLoginGoogle(): void {
+    //this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.authService.LoginGoogleUser()
+    .then((res) =>{
     this.route.navigate(['perfil']);
+    }).catch(err => console.log('err', err.message));
   }
 
   onLogoutGoogle(){
-     this.afAuth.auth.signOut();
+    // this.afAuth.auth.signOut();
+    this.authService.LogoutUser();
   }
 }
 

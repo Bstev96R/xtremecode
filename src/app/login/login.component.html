@@ -3,7 +3,7 @@
 >
  <div class="card">
     <div class="col s2">
-        <div class="col s12 m6 offset-m3">
+        <div >
           <img
             class="responsive-img img-circle"
             src="https://i0.pngocean.com/files/1005/858/500/vector-cow-logo-design.jpg"
@@ -13,11 +13,12 @@
           />
           <br />
     
-          <div class="col s8">
+          
+          <form #Form="ngForm" (ngSubmit)= "onLogin()" class="col s8">
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="email" class="validate" />
+                <input  [(ngModel)] ="email" id="email" type="email" class="validate" />
                 <label for="email">Email</label>
               </div>
             </div>
@@ -25,7 +26,7 @@
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">fingerprint</i>
-                <input id="pass" type="password" class="validate" />
+                <input [(ngModel)] = "password" id="password" type="password" class="validate" />
                 <label for="pass">Password</label>
               </div>
             </div>
@@ -50,7 +51,7 @@
                 type="submit"
                 name="action"
               >
-                Submit
+                Login
                 <i class="material-icons right">send</i>
               </button>
             </div>
@@ -85,7 +86,7 @@
               </div>
     
             </div>
-          </div>
+          </form>
         </div>
     </div>
  </div>
