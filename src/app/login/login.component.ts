@@ -26,6 +26,5 @@ export class LoginComponent implements OnInit {
   onLogoutGoogle(){
      this.afAuth.auth.signOut();
   }
-
 }
 
