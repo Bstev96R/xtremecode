@@ -23,8 +23,9 @@ export class LoginComponent implements OnInit {
     this.route.navigate(['perfil']);
   }
 
-  onLoginFacebook(){
-    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
+  onLogoutGoogle(){
+     this.afAuth.auth.signOut();
   }
+
 }
 
