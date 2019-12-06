@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public isLogged: boolean=false;
+
   // métodos para el login
 
   getCurrentUser(){
