@@ -1,4 +1,4 @@
-export interface CursoInterface {
+export interface CaracteristicaInterface {
     id?: string;
     propietario?: string;
     departamento?: string;

@@ -12,6 +12,7 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -24,10 +25,10 @@ import {FooterComponent} from './footer/footer.component'
 import {CuerpoComponent} from './cuerpo/cuerpo.component';
 import {CaracteristicasComponent} from './caracteristicas/caracteristicas.component';
 import {AddCaracteristicasComponent} from './add-caracteristicas/add-caracteristicas.component';
-
-  import { from } from "rxjs";
 import {AngularFireAuth} from '@angular/fire/auth';
 import {PerfilComponent} from './perfil/perfil.component';
+import {CaracteristicasService} from './services/caracteristicas.service';
+  import { from } from "rxjs";
 
 
 
@@ -59,12 +60,13 @@ import {PerfilComponent} from './perfil/perfil.component';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule,
-    ReactiveFormsModule,    
+    ReactiveFormsModule, 
+    AngularFirestoreModule,   
 
     AngularFireModule.initializeApp(environment.firebaseConfig)
     
   ],
-  providers: [AngularFireAuth],
+  providers: [AngularFireAuth, CaracteristicasService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
