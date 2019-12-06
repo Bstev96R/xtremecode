@@ -47,6 +47,9 @@ export const routes: Routes = [
 {
   path: 'crud', component: CaracteristicasComponent
 },
+{
+path:'crud2', component: AddCaracteristicasComponent
+},
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },
