@@ -11,5 +11,6 @@ export interface CaracteristicaInterface {
     peso?: string;
     precio?:string;
     antecedentes?:string;
+    fecha?:any;
   }
   

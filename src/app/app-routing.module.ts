@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AddCaracteristicasComponent } from './add-caracteristicas/add-caracteristicas.component';
+import { CaracteristicasComponent } from './caracteristicas/caracteristicas.component';
 
 
 export const routes: Routes = [
@@ -43,6 +44,9 @@ export const routes: Routes = [
   {
     path:'registroB', component: AddCaracteristicasComponent
   },
+{
+  path: 'crud', component: CaracteristicasComponent
+},
   {
     path: 'image', component: ImagesComponent, children: [
       { path: 'upload', component: ImageComponent },

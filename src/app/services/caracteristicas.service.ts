@@ -13,11 +13,35 @@ export class CaracteristicasService {
 
 
   constructor( public afs: AngularFirestore) { 
-    this.caracteristica= afs.collection('caracteristica').valueChanges();
+    this.CaracteristicaCollection = afs.collection<CaracteristicaInterface>('caracteristicas', ref => ref.orderBy('fecha', 'desc'));
+    this.caracteristica = this.CaracteristicaCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as CaracteristicaInterface;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    );
   }
 
 
   getCaracteristica(){
     return this.caracteristica;
   }
+
+  addCaracteristica(caracteristica: CaracteristicaInterface){
+
+    console.log('nueva caracteristica');
+    this.CaracteristicaCollection.add(caracteristica);
+    
+  }
+
+  deleteCurso() {
+    console.log('Borrar caracterstica')
+    
+  }
+
+  updateCurso() {
+    console.log('actualizar caracteristica')
 }
+}
+

@@ -1,15 +1,15 @@
 <div class="card">
   <div class="card-content">
     <span class="card-title">Registro Bovino</span>
-    <form  class="col s6">
+    <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm" class="col s6">
       <div class="row">
         <div class="input-field col s6">
-          <input type="text" name="propietario" id="propietario" placeholder="Nombre del propietario">
+          <input [(ngModel)]="caracteristicas.propietario" #propietario="ngModel" type="text" name="propietario" id="propietario" placeholder="Nombre del propietario">
           <label>Propietario</label>
         </div>
 
         <div class="input-field col s6">
-          <input type="text" name="Departamento" id="Departamento" placeholder="Departamento">
+          <input  [(ngModel)]="caracteristicas.Departamento" #Departamento="ngModel" type="text" name="Departamento" id="Departamento" placeholder="Departamento">
           <label>Departamento</label>
         </div>
       </div>
@@ -17,12 +17,12 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input type="text" name="Municipio" id="Municipio" placeholder="Municipio">
+          <input  [(ngModel)]="caracteristicas.Municipio" #Municipio="ngModel" type="text" name="Municipio" id="Municipio" placeholder="Municipio">
           <label>Municipio</label>
         </div>
 
         <div class="input-field col s6">
-          <input type="text" name="Comarca" id="Comarca" placeholder="Comarca">
+          <input  [(ngModel)]="caracteristicas.Comarca" #Comarca="ngModel" type="text" name="Comarca" id="Comarca" placeholder="Comarca">
           <label>Comarca</label>
         </div>
       </div>
@@ -30,41 +30,41 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input type="text" name="finca" id="finca" placeholder="Nombre del establecimiento">
+          <input  [(ngModel)]="caracteristicas.finca" #finca="ngModel" type="text" name="finca" id="finca" placeholder="Nombre del establecimiento">
           <label>Finca</label>
         </div>
 
         <div class="input-field col s6">
-          <input type="number" name="Arete" id="Arete" placeholder="numero de indentificacion">
+          <input  [(ngModel)]="caracteristicas.Chapa" #Chapa="ngModel" type="text" name="Arete" id="Arete" placeholder="numero de indentificacion">
           <label>Chapa</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s6">
-          <input type="text" name="Raza" id="Raza" placeholder="Raza del ejemplar">
+          <input  [(ngModel)]="caracteristicas.Raza" #Raza="ngModel" type="text" name="Raza" id="Raza" placeholder="Raza del ejemplar">
           <label>Raza</label>
         </div>
 
         <div class="input-field col s6">
-          <input type="text" name="Color" id="Color" placeholder="Color">
+          <input  [(ngModel)]="caracteristicas.Color" #Color="ngModel" type="text" name="Color" id="Color" placeholder="Color">
           <label>Color</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s6">
-          <input type="number" name="Peso" id="Peso" placeholder="peso en kg">
+          <input  [(ngModel)]="caracteristicas.peso" #peso="ngModel" type="text" name="Peso" id="Peso" placeholder="peso en kg">
           <label>Peso</label>
         </div>
 
         <div class="input-field col s6">
-          <input type="number" name="Precio" id="Precio" placeholder="precio por kilo">
+          <input  [(ngModel)]="caracteristicas.precio" #precio="ngModel" type="text" name="Precio" id="Precio" placeholder="precio por kilo">
           <label>Precio</label>
         </div>
 
         <div class="input-field col s6">
-          <input type="text" name="Antecedentes" id="Antecedentes" placeholder="descripcion de Antecedentes">
+          <input  [(ngModel)]="caracteristicas.descripcion" #descripcion="ngModel" type="text" name="Antecedentes" id="Antecedentes" placeholder="descripcion de Antecedentes">
           <label>Descripcion</label>
         </div>
       </div>
@@ -74,3 +74,5 @@
   </form>
   </div>
 </div>
+
+<app-caracteristicas></app-caracteristicas>
