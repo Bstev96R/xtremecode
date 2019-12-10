@@ -29,7 +29,7 @@ import {AddCaracteristicasComponent} from './add-caracteristicas/add-caracterist
 import {AngularFireAuth} from '@angular/fire/auth';
 import {PerfilComponent} from './perfil/perfil.component';
 import {CaracteristicasService} from './services/caracteristicas.service';
-  import { from } from "rxjs";
+import { TimerComponent} from './timer/timer.component';
 
 
 
@@ -48,7 +48,8 @@ import {CaracteristicasService} from './services/caracteristicas.service';
     CuerpoComponent,
     AddCaracteristicasComponent,
     CaracteristicasComponent,
-    PerfilComponent
+    PerfilComponent,
+    TimerComponent
     
   ],
   imports: [
