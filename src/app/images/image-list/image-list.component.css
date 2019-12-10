@@ -4,6 +4,7 @@
     position: relative;
     text-align: center;
     width: 100%;
+    height: 100%;
   }
   
   .imagebox img {
@@ -31,3 +32,4 @@
   .imagebox:hover .imagebox-desc {
     padding-bottom: 10%;
   }
+  

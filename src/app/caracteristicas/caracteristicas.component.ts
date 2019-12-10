@@ -11,6 +11,9 @@ export class CaracteristicasComponent implements OnInit {
   caracteristicas: CaracteristicaInterface[];
   editState: boolean = false;
   caracteristicaToEdit: CaracteristicaInterface;
+
+
+  
   constructor(private caracteristicaService: CaracteristicasService) { }
 
   ngOnInit() {
@@ -18,5 +21,5 @@ export class CaracteristicasComponent implements OnInit {
       this.caracteristicas = caracteristicas;
     })
   }
-
+ 
 }
