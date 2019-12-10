@@ -4,7 +4,7 @@
     <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm" class="col s6">
       <div class="row">
         <div class="input-field col s6">
-          <input [(ngModel)]="caracteristicas.propietario" #propietario="ngModel" type="text" name="propietario" id="propietario" placeholder="Nombre del propietario">
+          <input [(ngModel)]="caracteristicas.Propietario" #Propietario="ngModel" type="text" name="propietario" id="propietario" placeholder="Nombre del propietario">
           <label>Propietario</label>
         </div>
 
@@ -30,7 +30,7 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.finca" #finca="ngModel" type="text" name="finca" id="finca" placeholder="Nombre del establecimiento">
+          <input  [(ngModel)]="caracteristicas.Finca" #Finca="ngModel" type="text" name="finca" id="finca" placeholder="Nombre del establecimiento">
           <label>Finca</label>
         </div>
 
@@ -54,17 +54,17 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.peso" #peso="ngModel" type="text" name="Peso" id="Peso" placeholder="peso en kg">
+          <input  [(ngModel)]="caracteristicas.Peso" #Peso="ngModel" type="text" name="Peso" id="Peso" placeholder="peso en kg">
           <label>Peso</label>
         </div>
 
         <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.precio" #precio="ngModel" type="text" name="Precio" id="Precio" placeholder="precio por kilo">
+          <input  [(ngModel)]="caracteristicas.Precio" #Precio="ngModel" type="text" name="Precio" id="Precio" placeholder="precio por kilo">
           <label>Precio</label>
         </div>
 
         <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.descripcion" #descripcion="ngModel" type="text" name="Antecedentes" id="Antecedentes" placeholder="descripcion de Antecedentes">
+          <input  [(ngModel)]="caracteristicas.Descripcion" #Descripcion="ngModel" type="text" name="Antecedentes" id="Antecedentes" placeholder="descripcion de Antecedentes">
           <label>Descripcion</label>
         </div>
       </div>

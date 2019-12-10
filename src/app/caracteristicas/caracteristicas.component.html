@@ -1,5 +1,5 @@
- <div>
-   <ul class="collection">
+ <div *ngIf="caracteristicas?.length > 0;else noCaracteristica">
+   <ul  *ngFor="let caracteristica of caracteristicas" class="collection">
      <li class="collection-item">
        <a href="" class="secondary-content" style="color: black;">
          <i class="material-icons">create</i>
@@ -7,45 +7,45 @@
        </a>
        <div class="row">
          <div class="col s6">
-            <blockquote>Nombre del propietario</blockquote>
+            <blockquote><strong>Propietario:</strong> {{caracteristica.Propietario}}</blockquote>
          </div>
          <div class="col s6">
-            <blockquote>Departamento</blockquote>
+            <blockquote><strong>Departamento:</strong> {{caracteristica.Departamento}}</blockquote>
          </div>
          <div class="col s6">
-            <blockquote>Municipio</blockquote>
+            <blockquote><strong>Municipio:</strong> {{caracteristica.Municipio}}</blockquote>
          </div>
        </div>
        <div class="row">
           <div class="col s6">
-             <blockquote>Comarca</blockquote>
+             <blockquote><strong>Comarca:</strong> {{caracteristica.Comarca}}</blockquote>
           </div>
           <div class="col s6">
-             <blockquote>finca</blockquote>
+             <blockquote><strong>Finca:</strong> {{caracteristica.Finca}}</blockquote>
           </div>
           <div class="col s6">
-             <BLockquote><STrong>Arete:</STrong>1314141</BLockquote>
+             <BLockquote><STrong>Arete:</STrong> {{caracteristica.Chapa}}</BLockquote>
           </div>
         </div>
 
         <div class="row">
             <div class="col s6">
-               <blockquote><strong>Raza:</strong> holstein</blockquote>
+               <blockquote><strong>Raza:</strong> {{caracteristica.Raza}}</blockquote>
             </div>
             <div class="col s6">
-                <blockquote><strong>Color:</strong>blanco y negro</blockquote>
+                <blockquote><strong>Color:</strong> {{caracteristica.Color}}</blockquote>
             </div>
             <div class="col s6">
-                <blockquote><strong>peso:</strong>23423kg</blockquote>
+                <blockquote><strong>Peso:</strong> {{caracteristica.Peso}}</blockquote>
             </div>
           </div>
 
           <div class="row">
               <div class="col s6">
-                 <blockquote><strong>Precio:</strong> 454$</blockquote>
+                 <blockquote><strong>Precio:</strong> {{caracteristica.Precio}}</blockquote>
               </div>
               <div class="col s6">
-                  <blockquote><strong>Antecedentes:</strong>kaslaslasdas</blockquote>
+                  <blockquote><strong>Antecedentes:</strong> {{caracteristica.Descripcion}}</blockquote>
               </div>
 
             </div>
@@ -59,3 +59,7 @@
      </li>
    </ul>
  </div>
+ <ng-template #noCaracteristicas>
+   <hr>
+   <h5>NO EXISTEN eventos</h5>
+ </ng-template>

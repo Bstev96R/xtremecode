@@ -10,17 +10,17 @@ import { NgForm } from '@angular/forms/src/directives/ng_form';
 })
 export class AddCaracteristicasComponent implements OnInit {
   caracteristicas: CaracteristicaInterface = {
-    propietario: '',
-    departamento: '',
-    municipio: '',
-    comarca: '',
-    finca: '',
-    numero_arete: '',
-    color: '',
-    raza:'',
-    peso:'',
-    precio:'',
-    antecedentes:'',
+      Propietario: '',
+    Departamento: '',
+    Municipio: '',
+    Comarca: '',
+    Finca: '',
+    Numero_arete: '',
+    Color: '',
+    Raza:'',
+    Peso:'',
+    Precio:'',
+    Antecedentes:'',
     fecha:''
 
   };

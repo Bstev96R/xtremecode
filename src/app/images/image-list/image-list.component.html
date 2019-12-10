@@ -6,10 +6,16 @@
           <img src="/assets/img/new_image.jpg" class="img-fluid">
           <span class="imagebox-desc">Insertar nueva imagen</span></a>
       </div>
-      <div class="imagebox" *ngIf="i!=0">
+      
+         <div class="imagebox" *ngIf="i!=0">
         <img [src]="imageList[3*i-1].imageUrl" class="img-fluid">
         <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
+        
       </div>
+
+      
+     
+      
     </td>
     <td *ngIf="imageList[3*i]">
       <div class="imagebox">
@@ -24,4 +30,5 @@
       </div>
     </td>
   </tr>
+  
 </table>

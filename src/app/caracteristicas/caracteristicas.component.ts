@@ -8,12 +8,14 @@ import { CaracteristicasService } from '../services/caracteristicas.service';
   styleUrls: ['./caracteristicas.component.css']
 })
 export class CaracteristicasComponent implements OnInit {
-
+  caracteristicas: CaracteristicaInterface[];
+  editState: boolean = false;
+  caracteristicaToEdit: CaracteristicaInterface;
   constructor(private caracteristicaService: CaracteristicasService) { }
 
   ngOnInit() {
     this.caracteristicaService.getCaracteristica().subscribe(caracteristicas=>{
-      console.log(caracteristicas);
+      this.caracteristicas = caracteristicas;
     })
   }
 

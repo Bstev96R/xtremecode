@@ -1,16 +1,16 @@
 export interface CaracteristicaInterface {
     id?: string;
-    propietario?: string;
-    departamento?: string;
-    municipio?: string;
-    comarca?: string;
-    finca?: string;
-    numero_arete?: string;
-    raza?: string;
-    color?: string;
-    peso?: string;
-    precio?:string;
-    antecedentes?:string;
+    Propietario?: string;
+    Departamento?: string;
+    Municipio?: string;
+    Comarca?: string;
+    Finca?: string;
+    Numero_arete?: string;
+    Raza?: string;
+    Color?: string;
+    Peso?: string;
+    Precio?:string;
+    Antecedentes?:string;
     fecha?:any;
   }
   
