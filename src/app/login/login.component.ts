@@ -4,6 +4,7 @@ import { auth } from "firebase/app";
 import { Router } from "@angular/router";
 import { AuthService } from "../services/auth.service";
 import { NgForm } from "@angular/forms/src/directives/ng_form";
+import {NgModule} from '@angular/core';
 
 @Component({
   selector: "app-login",
@@ -12,24 +13,23 @@ import { NgForm } from "@angular/forms/src/directives/ng_form";
 })
 export class LoginComponent implements OnInit {
 
-
+  displayForm: boolean = false;
   constructor(
     public afAuth: AngularFireAuth,
     private route: Router,
     private authService: AuthService
   ) {}
 
-  public email: string = "";
-  public password: string = "";
+  public email: string = '';
+  public password: string = '';
   ngOnInit() {}
 
   onLogin(): void {
-    console.log("email", this.email);
-    console.log("password", this.password);
+    
     this.authService
       .LoginEmailPassUser(this.email, this.password)
       .then(res => {
-        this.route.navigate(["perfil"]);
+        this.onLoginRedirect();
       })
       .catch(err => console.log("err", err.message));
   }
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       .LoginGoogleUser()
       .then(res => {
         console.log("resUser", res);
-        this.route.navigate(["perfil"]);
+        this.onLoginRedirect();
       })
       .catch(err => console.log("err", err.message));
   }
@@ -48,5 +48,8 @@ export class LoginComponent implements OnInit {
   onLogoutGoogle() {
     // this.afAuth.auth.signOut();
     this.authService.LogoutUser();
+  }
+  onLoginRedirect(): void {
+    this.route.navigate(["perfil"]);
   }
 }

@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { ImageListComponent } from './images/image-list/image-list.component';
 import { ImageComponent } from './images/image/image.component';
 import { ImagesComponent } from './images/images.component';
@@ -13,6 +14,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { AddCaracteristicasComponent } from './add-caracteristicas/add-caracteristicas.component';
 import { CaracteristicasComponent } from './caracteristicas/caracteristicas.component';
 import {TimerComponent} from './timer/timer.component';
+
 
 export const routes: Routes = [
   
@@ -31,7 +33,7 @@ export const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
-    path: 'perfil', component: PerfilComponent
+    path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]
   },
   {
     path: 'footer', component: FooterComponent

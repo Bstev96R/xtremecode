@@ -20,6 +20,14 @@ export class AuthService {
       err => reject(err));
     }) 
   }*/
+  RegisterUser(email: string, pass: string) {
+    return new Promise((resolve, reject) => {
+      this.afsAuth.auth.createUserWithEmailAndPassword(email, pass).then(
+        userData => resolve(userData),
+        err => reject(err)
+      );
+    });
+  }
   LoginGoogleUser() {
     return this.afsAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
