@@ -25,7 +25,7 @@ timerID: number=null;
     this.timerID=countdown(this.date,(ts)=>{
       console.log(ts);
       this.time=ts;
-    },countdown.HOURS |countdown.MINUTES| countdown.SECONDS)
+    },countdown.HOURS|countdown.MINUTES| countdown.SECONDS)
   }
 
   ngOnDestroy(){
