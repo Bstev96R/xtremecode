@@ -2,72 +2,84 @@
 <br />
 
 <body style="background-image: url();">
-    <div class="container" >
-        <div class="card">
-          <div class="col s2">
-            <div>
-                <img
-                (click)="displayForm = !displayForm"
-                class="responsive-img "
-                src="https://i0.pngocean.com/files/1005/858/500/vector-cow-logo-design.jpg"
-                width="110"
-                height="130"
-                style="margin-left: 45%;  opacity: 80%;"
-              />
-              
-            </div>
-            <div class="divider" style="background-color:yellowgreen"></div><br>
-            <form class="class s4"
-            #formRegister="ngForm" (ngSubmit)="onAddUser()"
-            *ngIf="displayForm"      
-            >
-  
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">email</i>
-                  <input [(ngModel)] = "email" name="email" id="email" type="email" class="validate" />
-                  <label for="email">Correo</label>
-                  <span
-                    class="helper-text"
-                    data-error="wrong"
-                    data-success="right"
-                  ></span>
-                </div>
-              </div>
-      
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">fingerprint</i>
-                    <input [(ngModel)]="password" name="password" id="password" type="password" class="validate" />
-                    <label for="password">Contraseña</label>
-                  </div>
-                </div>
-      
-              <div class="row">
-                <button
-                  class="btn pulse waves-effect waves-light"
-                  style="background-color:#20ACB3"
-                  type="submit"
-                  name="action"
-                >
-                  Registrarse
-                  <i class="material-icons right">send</i>
-                </button>
-              </div>
-
-              <div class="row">
-                  <button
-                    class="waves-effect waves-light btn pulse col s12 social google"
-                    (click)="onLoginGoogle()"
-                    style="background-color: #E53935;
-                      color: white;"
-                  >
-                    <i class="fa fa-google" style=""></i> Iniciar sesión con google
-                  </button>
-                </div>
-      
-            </form>
-          </div>
+  <div class="container">
+    <div class="card">
+      <div class="col s2">
+        <div>
+          <img
+            (click)="displayForm = !displayForm"
+            class="responsive-img "
+            src="https://i0.pngocean.com/files/1005/858/500/vector-cow-logo-design.jpg"
+            width="110"
+            height="130"
+            style="margin-left: 45%;  opacity: 80%;"
+          />
         </div>
+        <div class="divider" style="background-color:yellowgreen"></div>
+        <br />
+        <form
+          class="class s4"
+          #formRegister="ngForm"
+          (ngSubmit)="onAddUser()"
+          *ngIf="displayForm"
+        >
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input
+                [(ngModel)]="email"
+                name="email"
+                id="email"
+                type="email"
+                class="validate"
+              />
+              <label for="email">Correo</label>
+              <span
+                class="helper-text"
+                data-error="wrong"
+                data-success="right"
+              ></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">fingerprint</i>
+              <input
+                [(ngModel)]="password"
+                name="password"
+                id="password"
+                type="password"
+                class="validate"
+              />
+              <label for="password">Contraseña</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <button
+              class="btn pulse waves-effect waves-light"
+              style="background-color:#20ACB3"
+              type="submit"
+              name="action"
+            >
+              Registrarse
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+
+          <div class="row">
+            <button
+              class="waves-effect waves-light btn pulse col s12 social google"
+              (click)="onLoginGoogle()"
+              style="background-color: #E53935;
+                      color: white;"
+            >
+              <i class="fa fa-google" style=""></i> Iniciar sesión con google
+            </button>
+          </div>
+        </form>
       </div>
+    </div>
+  </div>
 </body>
