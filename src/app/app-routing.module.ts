@@ -23,7 +23,7 @@ export const routes: Routes = [
     
   },
   {
-    path: 'raza', component: RazaComponent 
+    path: 'raza', component: RazaComponent , canActivate: [AuthGuard]
     
   },
   {
@@ -50,15 +50,15 @@ export const routes: Routes = [
   path: 'crud', component: CaracteristicasComponent
 },
 {
-path:'crud2', component: AddCaracteristicasComponent
+path:'crud2', component: AddCaracteristicasComponent, canActivate: [AuthGuard]
 },
 {
  path:'tiempo', component: TimerComponent
 },
   {
-    path: 'image', component: ImagesComponent, children: [
+    path: 'image', component: ImagesComponent,  children:  [
       { path: 'upload', component: ImageComponent },
-      { path: 'list', component: ImageListComponent }      
+      { path: 'list', component: ImageListComponent, canActivate: [AuthGuard] }      
     ]
   }
   
