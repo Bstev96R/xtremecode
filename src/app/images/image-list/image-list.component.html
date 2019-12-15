@@ -3,7 +3,7 @@
 
 
   <div class="col s6">
-    <app-timer date="2019-12-10"></app-timer>
+    <app-timer date="2019-12-12"></app-timer>
   </div>
 </div>
 
@@ -26,30 +26,73 @@
       <div class="imagebox" *ngIf="i!=0">
           <img  [src]="imageList[3*i-1].imageUrl" class="img-fluid">
           <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
-         
-          
         </div>
         
-  
-        
-       
-        
       </td>
-      <td *ngIf="imageList[3*i]">
-        <div class="imagebox">
-          <img [src]="imageList[3*i].imageUrl" class="img-fluid">
-          <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
-          <a routerLink="/crud"  class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          
+      <div class=" row">
+        <div class="col s6">
+            <div class="card">
+                <td *ngIf="imageList[3*i]">
+                    <div class="imagebox">
+                      <img [src]="imageList[3*i].imageUrl" class="img-fluid">
+                      <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
+                      <a routerLink="/crud"  class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <i class="material-icons prefix">attach_money</i>
+                              <textarea id="icon_prefix2" class="materialize-textarea">75$</textarea>
+                              <label for="icon_prefix2"></label>
+                            </div>
+                          </div>
+                          <button  id="aumentar" class="btn waves-effect waves-light" type="submit" name="action">Aumentar
+                              <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                        
+                                
+                      </div>
+                   
+              
+            
+                   
+                  </td>
+            </div>
         </div>
-      </td>
-      <td *ngIf="imageList[3*i+1]">
-        <div class="imagebox">
-          <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
-          <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
-         
+        <div class="col s6">
+            <div class="card" >
+                <td *ngIf="imageList[3*i+1]">
+                    <div class="imagebox">
+                      <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
+                      <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
+            
+                     
+                    </div>
+            
+                    <div class="row" >
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <i class="material-icons prefix">attach_money</i>
+                              <textarea id="icon_prefix2" class="materialize-textarea">45$</textarea>
+                              <label for="icon_prefix2"></label>
+                            </div>
+                          </div>
+                          <button  id="aumentar" class="btn waves-effect waves-light" type="submit" name="action">Aumentar
+                              <i class="material-icons right">send</i>
+                            </button>
+                        </form>
+                      </div>
+                  </td>
+            </div>
         </div>
-      </td>
+      </div>
+
+
+     
     
   </tr>
 

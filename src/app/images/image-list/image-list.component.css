@@ -3,9 +3,13 @@
     padding: 0px;
     position: relative;
     text-align: center;
-    width: 50%;
+    width: 100%;
     
   }
+  #aumentar{
+    margin-left: 35%;
+  }
+  
   
   .imagebox img {
     opacity: 1;
