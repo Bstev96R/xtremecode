@@ -14,9 +14,21 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { AddCaracteristicasComponent } from './add-caracteristicas/add-caracteristicas.component';
 import { CaracteristicasComponent } from './caracteristicas/caracteristicas.component';
 import {TimerComponent} from './timer/timer.component';
-
+import {ProductosComponent} from './productos/productos.component';
+import {CounterComponent} from './counter/counter.component';
+import {PreventaComponent} from './preventa/preventa.component';
 
 export const routes: Routes = [
+  {
+    path:'preventa' , component: PreventaComponent
+  },
+
+  {
+    path:'counter' , component: CounterComponent
+  },
+  {
+    path:'producto', component: ProductosComponent
+  },
   
   {
     path: 'carousel', component: CarouselComponent

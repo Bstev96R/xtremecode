@@ -1,0 +1,14 @@
+* {
+    font-family: Lato;
+  }
+  
+  .counter-wrapper {
+    width: 200px;
+    height: 80px;
+    display: inline-flex;
+    
+    font-size: 3rem;
+    justify-content: right;
+     align-items: center;
+     
+  }

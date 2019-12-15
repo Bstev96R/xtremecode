@@ -30,7 +30,9 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {PerfilComponent} from './perfil/perfil.component';
 import {CaracteristicasService} from './services/caracteristicas.service';
 import { TimerComponent} from './timer/timer.component';
-
+import {ProductosComponent} from './productos/productos.component';
+import {CounterComponent} from './counter/counter.component';
+import {PreventaComponent} from './preventa/preventa.component';
 
 
 @NgModule({
@@ -49,7 +51,11 @@ import { TimerComponent} from './timer/timer.component';
     AddCaracteristicasComponent,
     CaracteristicasComponent,
     PerfilComponent,
-    TimerComponent
+    TimerComponent,
+    ProductosComponent,
+    CounterComponent,
+    PreventaComponent
+
     
   ],
   imports: [

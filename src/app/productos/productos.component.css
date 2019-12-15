@@ -1,0 +1,12 @@
+#banner{
+    background-color: #81c784;
+    border-radius: 6px;
+
+}
+#titulo{
+    font-weight: bold;
+}
+#titulo:hover{
+    
+    font-size: 40px;
+}
