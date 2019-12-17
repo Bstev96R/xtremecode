@@ -1,9 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, FormBuilder } from "@angular/forms";
+import { element } from 'protractor';
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { FormGroup, FormControl, FormBuilder, Form } from "@angular/forms";
 import { Input } from "./input";
+import { CaracteristicaInterface } from '../models/Caracteristica.interface';
+import {CaracteristicasService} from '../services/caracteristicas.service';
 
-import { PDFDocumentProxy } from "ng2-pdf-viewer";
-import {PDFAnnotations, PDFAnnotationData} from 'pdfjs-dist';
+import * as jsPDF from "jspdf";
 
 @Component({
   selector: "app-cartaventa",
@@ -11,8 +13,27 @@ import {PDFAnnotations, PDFAnnotationData} from 'pdfjs-dist';
   styleUrls: ["./cartaventa.component.css"]
 })
 export class CartaventaComponent implements OnInit {
-  
- 
-  constructor(){}
-  ngOnInit(){}
+  constructor() {}
+  @ViewChild("content") content: ElementRef;
+
+  public dowloandpdf() {
+    
+    let doc = new jsPDF();
+
+    let specialElementHandlers = {
+      '#editor' : function (element, renderer){
+        return true;
+      }
+    };
+
+    let content = this.content.nativeElement;
+    doc.fromHTML(content.innerHTML, 15, 15,{
+      'width' : 190,
+      'elementHandlers' : specialElementHandlers
+    });
+
+    doc.save('carta preventa.pdf');
+  }
+
+  ngOnInit() {}
 }
