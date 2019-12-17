@@ -13,7 +13,11 @@ import * as jsPDF from "jspdf";
   styleUrls: ["./cartaventa.component.css"]
 })
 export class CartaventaComponent implements OnInit {
-  constructor() {}
+  caracteristicas: CaracteristicaInterface[];
+  editState: boolean = false;
+  caracteristicaToEdit: CaracteristicaInterface;
+  precio: any[];
+  constructor( private caracteristicaService: CaracteristicasService) {}
   @ViewChild("content") content: ElementRef;
 
   public dowloandpdf() {
@@ -35,5 +39,11 @@ export class CartaventaComponent implements OnInit {
     doc.save('carta preventa.pdf');
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.caracteristicaService.getCaracteristica().subscribe(caracteristicas=>{
+      this.caracteristicas = caracteristicas;
+      this.precio= caracteristicas
+      
+    });
+  }
 }

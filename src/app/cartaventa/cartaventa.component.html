@@ -1,13 +1,39 @@
 <div class="container col-5" id="content" #content>
   <h2>Carta de PreVenta</h2>
   <br />
-  <p>
-    Por medio de la presente hago constar que he inciado el proceso de compra -
-    venta con el señor 
-    <strong style="visibility: collapse;"> Bernis Aarón Flores Vallecillo</strong>
-    propietario de la finca la esperanza etc..........
-  </p> 
+  <div class="row">
+    <form class="col s12">
+      <div class="card">
+        <div class="row">
+          <div class="col s6"><strong>propietario: {{ precio[1].Propietario }}</strong></div>
+          <div class="col s6"> <strong>Departamento: {{ precio[0].Departamento }}</strong></div>
+        </div >
+        <div class="row">
+          <div class="col s6"><strong>Municipio: {{ precio[1].Municipio }}</strong></div>
+          <div class="col s6"> <strong>Comarca: {{ precio[1].Comarca }}</strong></div>
+        </div>
+        <div class="row">
+          <div class="col s6"><strong>Finca: {{ precio[1].Finca }}</strong></div>
+          <div class="col s6"><strong>Arete: {{ precio[1].Chapa }}</strong></div>
+        </div>
+        <div class="row">
+          <div class="col s6"><strong>Raza: {{ precio[1].Raza }}</strong></div>
+          <div class="col s6"><strong>Color: {{ precio[1].Color }}</strong></div>
+        </div>
+        
+        <div class="row">
+          <div class="col s6"><strong>Peso: {{ precio[1].Peso }}</strong></div>
+          <div class="col s6"><strong>Antecedentes: {{ precio[1].Descripcion }}</strong></div>
+        </div>
+        <textarea class="text-center">{{precio[1].Precio}}</textarea>
+      </div>
 
+ 
+
+      <br />
+
+    </form>
+  </div>
   
   <button
     class="btn pulse waves-effect  waves-light"
