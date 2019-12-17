@@ -16,7 +16,10 @@ export class TaskComponent implements OnInit {
   }
 
  removeTask(task : Task){
-    const response= confirm('estas seguro que deseas removerlo')
+    const response= confirm('estas seguro que deseas remover tu oferta?');
+    if(response){
+      this.taskService.removeTask(task);
+    }
 
  }
 
