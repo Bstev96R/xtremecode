@@ -2,6 +2,9 @@
   <div class="card-header">
       <h2>{{ task.title }}</h2>
       <div class="float-right">
+        <a  (click)="task.hide=!task.hide" class="btn btn-info">
+            {{task.hide ? 'Show' : 'hide'}}
+        </a>
         <a href="#" (click)="removeTask(task)" class="btn btn-danger">Remove</a>
       </div>
   </div>
