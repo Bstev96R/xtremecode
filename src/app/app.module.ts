@@ -33,6 +33,7 @@ import { TimerComponent} from './timer/timer.component';
 import {ProductosComponent} from './productos/productos.component';
 import {CounterComponent} from './counter/counter.component';
 import {PreventaComponent} from './preventa/preventa.component';
+import {CartaventaComponent } from './cartaventa/cartaventa.component';
 
 
 @NgModule({
@@ -54,8 +55,8 @@ import {PreventaComponent} from './preventa/preventa.component';
     TimerComponent,
     ProductosComponent,
     CounterComponent,
-    PreventaComponent
-
+    PreventaComponent,
+    CartaventaComponent
     
   ],
   imports: [
