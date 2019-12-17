@@ -2,41 +2,72 @@
   
   <form class="col s12">
     <h2>Control de venta de ganado</h2>
-    <div class="row">
-      <div class="input-field col s6">
-        <input placeholder="" id="first_name" type="text" class="validate">
-        <label for="first_name">codigo</label>
-      </div>
-      <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Numero</label>
-      </div>
+    <div *ngIf="caracteristicas?.length > 0;else noCaracteristica">
+      <ul  *ngFor="let caracteristica of caracteristicas" class="collection">
+        <li class="collection-item">
+         
+          <div class="row">
+            <div class="col s6">
+               <blockquote><strong>Propietario:</strong> {{caracteristica.Propietario}}</blockquote>
+            </div>
+            <div class="col s6">
+               <blockquote><strong>Departamento:</strong> {{caracteristica.Departamento}}</blockquote>
+            </div>
+            <div class="col s6">
+               <blockquote><strong>Municipio:</strong> {{caracteristica.Municipio}}</blockquote>
+            </div>
+          </div>
+          <div class="row">
+             <div class="col s6">
+                <blockquote><strong>Comarca:</strong> {{caracteristica.Comarca}}</blockquote>
+             </div>
+             <div class="col s6">
+                <blockquote><strong>Finca:</strong> {{caracteristica.Finca}}</blockquote>
+             </div>
+             <div class="col s6">
+                <BLockquote><STrong>Arete:</STrong> {{caracteristica.Chapa}}</BLockquote>
+             </div>
+           </div>
+   
+           <div class="row">
+               <div class="col s6">
+                  <blockquote><strong>Raza:</strong> {{caracteristica.Raza}}</blockquote>
+               </div>
+               <div class="col s6">
+                   <blockquote><strong>Color:</strong> {{caracteristica.Color}}</blockquote>
+               </div>
+               <div class="col s6">
+                   <blockquote><strong>Peso:</strong> {{caracteristica.Peso}}</blockquote>
+               </div>
+             </div>
+   
+             <div class="row">
+                 <div class="col s6">
+                    <blockquote><strong>Precio:</strong> {{caracteristica.Precio}}</blockquote>
+                 </div>
+                 <div class="col s6">
+                     <blockquote><strong>Antecedentes:</strong> {{caracteristica.Descripcion}}</blockquote>
+                 </div>
+   
+               </div>
+               <hr>
+          
+          
+        
+        
+        
+        
+        </li>
+      </ul>
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input  id="disabled" type="text" class="validate">
-        <label for="disabled">Peso</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="password" type="text" class="validate">
-        <label for="password">Precio kilo</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="text" class="validate">
-        <label for="email">Valor Total</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Correo</label>
-      </div>
-    </div>
+    <ng-template #noCaracteristicas>
+      <hr>
+      <h5>NO EXISTEN eventos</h5>
+    </ng-template>
+   <div class="card">
+      {{agregar}}
+   </div>
+ 
 
     <a class="waves-effect waves-light btn right"><i class="material-icons right">send</i>Enviar</a>
  

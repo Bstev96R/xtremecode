@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from 'src/app/shared/image.service';
+import {CaracteristicaInterface} from '../../models/Caracteristica.interface';
+import {CaracteristicasService} from '../../services/caracteristicas.service';
 
 
 @Component({
@@ -10,8 +12,13 @@ import { ImageService } from 'src/app/shared/image.service';
 export class ImageListComponent implements OnInit {
   imageList: any[];
   rowIndexArray: any[];
+  caracteristicas: CaracteristicaInterface[];
+  editState: boolean = false;
+  caracteristicaToEdit: CaracteristicaInterface;
+  precio: any[];
+  
 
-  constructor(private service: ImageService) { 
+  constructor( private service: ImageService, private caracteristicaService: CaracteristicasService) { 
     
   }
 
@@ -22,7 +29,15 @@ export class ImageListComponent implements OnInit {
         this.rowIndexArray =  Array.from(Array(Math.ceil((this.imageList.length+1) / 3)).keys());
       }
     );
+    this.caracteristicaService.getCaracteristica().subscribe(caracteristicas=>{
+      this.caracteristicas = caracteristicas;
+      this.precio= caracteristicas
+      
+    });
+
+    
   }
+  
   
  
 

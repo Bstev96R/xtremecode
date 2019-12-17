@@ -36,19 +36,31 @@
                     <div class="imagebox">
                       <img [src]="imageList[3*i].imageUrl" class="img-fluid">
                       <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
-                      <a routerLink="/crud"  class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                     
             
                     </div>
                     <div class="row">
                         <form class="col s12">
+                          <div class="card">
+                            <strong>propietario: {{precio[0].Propietario}}</strong>
+                            <strong>Departamento: {{precio[0].Departamento}}</strong>
+                            <strong>Municipio: {{precio[0].Municipio}}</strong>
+                            <strong>Comarca: {{precio[0].Comarca}}</strong>
+                            <strong>Finca: {{precio[0].Finca}}</strong>
+                            <strong>Arete: {{precio[0].Chapa}}</strong>
+                            <strong>Raza: {{precio[0].Raza}}</strong>
+                            <strong>Color: {{precio[0].Color}}</strong>
+                            <strong>Peso: {{precio[0].Peso}}</strong>
+                            <strong>Antecedentes: {{precio[0].Descripcion}}</strong>
+                          </div>
                           <div class="row">
                             <div class="input-field col s6">
                               <i class="material-icons prefix">attach_money</i>
-                              <textarea id="icon_prefix2" class="materialize-textarea">75$</textarea>
+                              <textarea id="icon_prefix2" class="materialize-textarea">{{precio[0].Precio}}</textarea>
                               <label for="icon_prefix2"></label>
                             </div>
                           </div>
-                          <button  id="aumentar" class="btn waves-effect waves-light" type="submit" name="action">Aumentar
+                          <button onclick="" id="aumentar" class="btn waves-effect waves-light" type="submit" name="action">Aumentar
                               <i class="material-icons right">send</i>
                             </button>
                             <br>
@@ -82,7 +94,8 @@
                           <div class="row">
                             <div class="input-field col s6">
                               <i class="material-icons prefix">attach_money</i>
-                              <textarea id="icon_prefix2" class="materialize-textarea">45$</textarea>
+                              
+                              <textarea id="icon_prefix2" class="materialize-textarea">{{precio[0].Precio}}</textarea>
                               <label for="icon_prefix2"></label>
                             </div>
                           </div>
