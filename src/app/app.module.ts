@@ -34,6 +34,10 @@ import {ProductosComponent} from './productos/productos.component';
 import {CounterComponent} from './counter/counter.component';
 import {PreventaComponent} from './preventa/preventa.component';
 import {CartaventaComponent } from './cartaventa/cartaventa.component';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
+
+
+
 
 
 @NgModule({
@@ -71,7 +75,9 @@ import {CartaventaComponent } from './cartaventa/cartaventa.component';
     ReactiveFormsModule, 
     AngularFirestoreModule,  
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    PdfViewerModule
+    
     
   ],
   providers: [AngularFireAuth, CaracteristicasService],
