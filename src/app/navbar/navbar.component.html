@@ -7,12 +7,16 @@
         <a id="home" routerLink="/image/list"> Subasta </a>
       </li>
       <!--LOGGED = {{isLogged}} -->
-      <li><a id="home">Oferta individual</a></li>
+      <li><a id="home">Oferta Individual</a></li>
       <li *ngIf="!isLogged"><a id="home" routerLink="/login">Login</a></li>
-      <li ><a id="home">perfil</a></li>
-      <li ><a (click)="onLogoutGoogle()" routerLink="/cuerpo" id="home">Cerrar sesion</a></li>
+      <li><a id="home">Perfil</a></li>
+      <li>
+        <a (click)="onLogoutGoogle()" routerLink="/cuerpo" id="home"
+          >Cerrar Sesión</a
+        >
+      </li>
       <a routerLink="/crud2" class="waves-effect waves-light btn pulse"
-        ><i class="material-icons left">add_to_photos</i>Publicar evento</a
+        ><i class="material-icons left">add_to_photos</i>Publicar Evento</a
       >
     </ul>
   </div>
@@ -20,12 +24,14 @@
     <ul class="tabs tabs-transparent">
       <li class="tab" routerLink="/cuerpo">
         <a class="hoverable" id="home">Inicio</a>
-     </li>
-      <li class="tab"><a class="hoverable" id="home">compañia</a></li>
+      </li>
+      <li class="tab"><a class="hoverable" id="home">Compañia</a></li>
       <li class="tab " routerLink="/raza">
         <a class="hoverable" id="home">Galeria</a>
       </li>
-      <li routerLink="/producto" class="tab"><a class="hoverable" id="home">Productos</a></li>
+      <li routerLink="/producto" class="tab">
+        <a class="hoverable" id="home">Productos</a>
+      </li>
     </ul>
   </div>
 </nav>
