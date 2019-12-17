@@ -8,7 +8,7 @@ import{Task} from '../models/task.interface';
 })
 export class TaskFormComponent implements OnInit {
   title: string;
-  description: string;
+  
   @Output() taskAdded= new EventEmitter<Task>();
   constructor() { }
 
@@ -18,11 +18,11 @@ export class TaskFormComponent implements OnInit {
   addTask() {
     this.taskAdded.emit({
       title: this.title,
-      description: this.description,
+      
       hide: true
     });
     this.title="";
-    this.description="";
+    
   }
 
 }

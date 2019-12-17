@@ -1,7 +1,7 @@
 <app-task-form (taskAdded)="addTask($event)"></app-task-form>
 
     <div class="container">
-        <app-task class="col-md-4 p-2"
+        <app-task class="col-md-9 p-2"
         *ngFor="let task of tasks"
         [task]="task"
         ></app-task>
