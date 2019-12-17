@@ -21,5 +21,15 @@ export class CaracteristicasComponent implements OnInit {
       this.caracteristicas = caracteristicas;
     })
   }
+
+  editCaracteristica(event, Caracteristicas: CaracteristicaInterface) {
+    this.editState = true;
+    this.caracteristicaToEdit = Caracteristicas;
+  }
+
+  clearState() {
+    this.editState = false;
+    this.caracteristicaToEdit = null;
+  }
  
 }

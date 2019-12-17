@@ -1,9 +1,9 @@
  <div *ngIf="caracteristicas?.length > 0;else noCaracteristica">
    <ul  *ngFor="let caracteristica of caracteristicas" class="collection">
      <li class="collection-item">
-       <a href="" class="secondary-content" style="color: black;">
-         <i class="material-icons">create</i>
-         <i class="material-icons">close</i>
+       <a href="/crud" class="secondary-content" style="color: black;">
+         <i *ngIf="editState == false" (click)="editCurso($event, Caracteristicas)" class="material-icons">create</i>
+         <i *ngIf="editState && caracteristicaToEdit.id == caracteristicas.id" (click)="clearState()" class="material-icons">close</i>
        </a>
        <div class="row">
          <div class="col s6">
@@ -50,6 +50,83 @@
 
             </div>
             <hr>
+           <div  *ngIf="editState && caracteristicaToEdit.id == caracteristica.id" class="container-updateCurso">
+            <form (ngSubmit)="onUpdateCaracteristicas(caracteristica)"  class="col s6">
+               <div class="row">
+                 <div class="input-field col s6">
+                   <input [(ngModel)]="caracteristicas.Propietario" #Propietario="ngModel" type="text" name="propietario" id="propietario" placeholder="Nombre del propietario">
+                   <label>Propietario</label>
+                 </div>
+         
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Departamento" #Departamento="ngModel" type="text" name="Departamento" id="Departamento" placeholder="Departamento">
+                   <label>Departamento</label>
+                 </div>
+               </div>
+         
+         
+               <div class="row">
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Municipio" #Municipio="ngModel" type="text" name="Municipio" id="Municipio" placeholder="Municipio">
+                   <label>Municipio</label>
+                 </div>
+         
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Comarca" #Comarca="ngModel" type="text" name="Comarca" id="Comarca" placeholder="Comarca">
+                   <label>Comarca</label>
+                 </div>
+               </div>
+         
+         
+               <div class="row">
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Finca" #Finca="ngModel" type="text" name="finca" id="finca" placeholder="Nombre del establecimiento">
+                   <label>Finca</label>
+                 </div>
+         
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Chapa" #Chapa="ngModel" type="text" name="Arete" id="Arete" placeholder="numero de indentificacion">
+                   <label>Chapa</label>
+                 </div>
+               </div>
+         
+               <div class="row">
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Raza" #Raza="ngModel" type="text" name="Raza" id="Raza" placeholder="Raza del ejemplar">
+                   <label>Raza</label>
+                 </div>
+         
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Color" #Color="ngModel" type="text" name="Color" id="Color" placeholder="Color">
+                   <label>Color</label>
+                 </div>
+               </div>
+         
+               <div class="row">
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Peso" #Peso="ngModel" type="text" name="Peso" id="Peso" placeholder="peso en kg">
+                   <label>Peso</label>
+                 </div>
+         
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Precio" #Precio="ngModel" type="text" name="Precio" id="Precio" placeholder="precio por kilo">
+                   <label>Precio</label>
+                 </div>
+         
+                 <div class="input-field col s6">
+                   <input  [(ngModel)]="caracteristicas.Descripcion" #Descripcion="ngModel" type="text" name="Antecedentes" id="Antecedentes" placeholder="descripcion de Antecedentes">
+                   <label>Descripcion</label>
+                 </div>
+               </div>
+               <button (click)="deleteCurso($event, caracteristica)" class="btn red right">Borrar
+                  <i class="material-icons right">delete_forever</i>
+                </button>
+                <button type="submit" class="btn orange">Actualizar
+                  <i class="material-icons right">save</i>
+                </button>
+              
+           </form>
+           </div> 
        
        
      
