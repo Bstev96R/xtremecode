@@ -34,7 +34,10 @@ import {ProductosComponent} from './productos/productos.component';
 import {CounterComponent} from './counter/counter.component';
 import {PreventaComponent} from './preventa/preventa.component';
 
-
+import { TaskService } from './services/task.service';
+import {TaskComponent} from './task/task.component';
+import {TaskFormComponent} from './task-form/task-form.component';
+import {TaskListComponent} from './task-list/task-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,10 @@ import {PreventaComponent} from './preventa/preventa.component';
     TimerComponent,
     ProductosComponent,
     CounterComponent,
-    PreventaComponent
+    PreventaComponent,
+    TaskComponent,
+    TaskFormComponent,
+    TaskListComponent
 
     
   ],
@@ -73,7 +79,7 @@ import {PreventaComponent} from './preventa/preventa.component';
     AngularFireModule.initializeApp(environment.firebaseConfig)
     
   ],
-  providers: [AngularFireAuth, CaracteristicasService],
+  providers: [AngularFireAuth, CaracteristicasService,TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
