@@ -33,6 +33,7 @@
     "jquery": "^2.2.4",
     "materialize-css": "^1.0.0",
     "materialize-social": "^1.0.3",
+    "ng2-pdf-viewer": "^6.0.2",
     "popper.js": "^1.16.0",
     "rxjs": "~6.3.3",
     "sweetalert2": "^9.4.1",

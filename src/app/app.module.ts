@@ -33,6 +33,11 @@ import { TimerComponent} from './timer/timer.component';
 import {ProductosComponent} from './productos/productos.component';
 import {CounterComponent} from './counter/counter.component';
 import {PreventaComponent} from './preventa/preventa.component';
+import {CartaventaComponent } from './cartaventa/cartaventa.component';
+
+
+
+
 
 import { TaskService } from './services/task.service';
 import {TaskComponent} from './task/task.component';
@@ -60,8 +65,9 @@ import {TaskListComponent} from './task-list/task-list.component';
     PreventaComponent,
     TaskComponent,
     TaskFormComponent,
-    TaskListComponent
+    TaskListComponent,
 
+    CartaventaComponent
     
   ],
   imports: [
@@ -76,7 +82,8 @@ import {TaskListComponent} from './task-list/task-list.component';
     ReactiveFormsModule, 
     AngularFirestoreModule,  
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+   
     
   ],
   providers: [AngularFireAuth, CaracteristicasService,TaskService],
