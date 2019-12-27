@@ -6,10 +6,12 @@
       <li>
         <a id="home" routerLink="/image/list"> Subasta </a>
       </li>
-      <!--LOGGED = {{isLogged}} -->
+
       <li><a id="home">Oferta Individual</a></li>
       <li *ngIf="!isLogged"><a id="home" routerLink="/login">Login</a></li>
-      <li><a id="home" routerLink="/perfil">Perfil</a></li>
+      <li><a id="home" routerLink="/perfil" *ngIf="displayForm">Perfil</a></li>
+      <li><a id="home" routerLink="/perfil" *ngIf="displayForm">Perfil</a></li>
+     
       <li>
         <a (click)="onLogoutGoogle()" routerLink="/cuerpo" id="home"
           >Cerrar Sesión</a
@@ -35,3 +37,4 @@
     </ul>
   </div>
 </nav>
+

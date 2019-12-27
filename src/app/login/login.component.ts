@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   displayForm: boolean = false;
   constructor(
     public afAuth: AngularFireAuth,
-    private route: Router,
+    private route: Router,  
     private authService: AuthService
   ) {}
 

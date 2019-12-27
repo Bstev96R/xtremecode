@@ -35,8 +35,17 @@
   </div>
 </div>
 -->
-
-<section id="profile" class="container;">
+<img
+style="position: absolute; 
+width: 60px; height: 60px; 
+visibility: visible;"
+src="{{ user.photoUrl }}"
+class="rounded-circle img-thumbnail"
+alt="profile"
+(click)="displayForm = !displayForm"
+/>
+<br>
+<section id="profile" class="container;" *ngIf="displayForm">
   <div class="row mt-5">
     <div
       class="offset-lg-4 col-lg4 col-sm-6 col-12 main-secction text-center card"
@@ -44,9 +53,12 @@
       <div class="row">
         <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
       </div>
-      <div class="row  card-body">
-        <div class="col-12">
+      <div class="row  card-body" 
+        style="margin-left: 150; align-items: center;"
+      >
+        <div class="col-12" >
           <img
+          style="width: 130px ;height: 130px ;"
             src="{{ user.photoUrl }}"
             class="rounded-circle img-thumbnail"
             alt="profile"
@@ -67,3 +79,5 @@
     </div>
   </div>
 </section>
+
+

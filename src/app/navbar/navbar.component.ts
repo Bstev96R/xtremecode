@@ -1,8 +1,12 @@
+import { PerfilComponent } from './../perfil/perfil.component';
+import { LoginComponent } from './../login/login.component';
 import { Component, OnInit,ElementRef } from '@angular/core';
 import {Location,LocationStrategy,PathLocationStrategy} from '@angular/common';
 import {AuthService} from '../services/auth.service';
 import {AngularFireAuth} from '@angular/fire/auth';
 import { auth } from 'firebase';
+
+
 
 declare var $: any;
 
@@ -20,8 +24,10 @@ export class NavbarComponent implements OnInit {
     this.sidebarVisible = false;
   }
 
+  displayForm: boolean = false;
+
   public isLogged: boolean=false;
-  public isLogge2: boolean=true;
+
 
   // métodos para el login
 
