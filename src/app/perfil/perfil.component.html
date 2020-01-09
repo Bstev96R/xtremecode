@@ -35,8 +35,43 @@
   </div>
 </div>
 -->
+<div style="background-color: #4C4C4C">
+  <img
+    style="position: absolute; 
+  width: 60px; height: 60px; 
+  visibility: visible;
+  margin: 10px 0 0 10px;
+  border-radius: initial;
+  "
+    src="{{ user.photoUrl }}"
+    class="rounded-circle img-thumbnail pulse"
+    alt="profile"
+    (click)="displayForm = !displayForm"
+  />
+</div>
 
-<section id="profile" class="container;">
+<br />
+<br />
+<br />
+<div class="row col-4" style="position:relative; margin: 10px 0 0 10px;">
+  <h5
+    style="font-family: sans-serif;
+  "
+  >
+    Bienvenido a Suganic, la primer subasta online de Nicaragua, evita gastos
+    innecesarios y perdida de tiempo. Tu solución al momento de subastar esta en
+    SUGANIC.
+  </h5>
+</div>
+
+<section
+  id="profile"
+  class="container;"
+  *ngIf="displayForm"
+  style="position:absolute; top:0; right:0;
+    background-image: url(https://mapio.net/images-p/25839516.jpg);
+  "
+>
   <div class="row mt-5">
     <div
       class="offset-lg-4 col-lg4 col-sm-6 col-12 main-secction text-center card"
@@ -44,26 +79,47 @@
       <div class="row">
         <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
       </div>
-      <div class="row  card-body">
+      <div
+        class="row  card-body"
+        style="margin-left: 150; align-items: center;"
+      >
         <div class="col-12">
           <img
+            style="width: 130px ;height: 130px ;"
             src="{{ user.photoUrl }}"
             class="rounded-circle img-thumbnail"
             alt="profile"
           />
-          <h5 *ngIf="providerId != 'password'">{{ user.name }}</h5>
-          <p>
-            {{ user.email }}
-          </p>
+          <h6
+            style="color: rgb(34, 33, 33); font-family: sans-serif;
+              font-weight: bold;
+              "
+            *ngIf="providerId != 'password'"
+          >
+            {{ user.name }}
+          </h6>
 
-          <hr />
-          <span style="font-family: sans-serif;">
-            Bienvenido a Suganic, la primer subasta online de Nicaragua, evita
-            gastos innecesarios y perdida de tiempo. Tu solución al momento de
-            subastar esta en SUGANIC.
-          </span>
+          <h6
+            style="color: rgb(34, 33, 33); 
+            font-family: sans-serif;
+            font-weight: bold;
+            "
+          >
+            {{ user.email }}
+          </h6>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="row col-4" style="margin: 10px 0 0 10px;">
+  <p
+    style="font-family: sans-serif;
+  "
+  >
+    Bienvenido a Suganic, la primer subasta online de Nicaragua, evita gastos
+    innecesarios y perdida de tiempo. Tu solución al momento de subastar esta en
+    SUGANIC.
+  </p>
+</div>

@@ -1,108 +1,109 @@
-<br>
-<div class="container" style="background-image: url();">
-  <div class="card">
-    <div class="col s2">
-      <div>
-        <img
-          (click)="displayForm = !displayForm"
-          class="responsive-img img-circle"
-          src="https://www.neoesfera.com/wp-content/uploads/2018/05/logo-vaca.png"
-          width="120"
-          height="120"
-          style="margin-left: 45%;  opacity: 80%;"
-        />
-        <br />
-        <form
-          #formLogin="ngForm"
-          (ngSubmit)="onLogin()"
-          *ngIf="displayForm"
-          class="col s8"
-        >
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input
-                [(ngModel)]="email"
-                id="input1"
-                name="input1"
-                type="email"
-                class="validate"
-                required
-              />
-              <label for="email">Email</label>
+<body>
+  <div class="container" style="background-image: url(); opacity: 50;">
+    <div class="card">
+      <div class="col s2">
+        <div>
+          <img
+            (click)="displayForm = !displayForm"
+            class="responsive-img img-circle"
+            src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_514/https://aprodiv.com/wp-content/uploads/2019/10/login.png"
+            width="120"
+            height="120"
+            style="margin-left: 45%;  opacity: 80%;"
+          />
+          <br />
+          <form
+            #formLogin="ngForm"
+            (ngSubmit)="onLogin()"
+            class="col s8"
+            *ngIf="displayForm"
+          >
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input
+                  [(ngModel)]="email"
+                  id="input1"
+                  name="input1"
+                  type="email"
+                  class="validate"
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">fingerprint</i>
-              <input
-                [(ngModel)]="password"
-                id="input2"
-                name="input2"
-                type="password"
-                class="validate"
-                required
-              />
-              <label for="pass">Password</label>
+  
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">fingerprint</i>
+                <input
+                  [(ngModel)]="password"
+                  id="input2"
+                  name="input2"
+                  type="password"
+                  class="validate"
+                  required
+                />
+                <label for="pass">Password</label>
+              </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col s12">
-              <p>
-                <label>
-                  <input type="checkbox" checked="unchecked" />
-                  <span>Recordar contraseña?</span>
-                </label>
-              </p>
+  
+            <div class="row">
+              <div class="col s12">
+                <p>
+                  <label>
+                    <input type="checkbox" checked="unchecked" />
+                    <span>Recordar contraseña?</span>
+                  </label>
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div class="row">
-            <button
-              class="btn pulse waves-effect waves-block waves-light"
-              style="align-content:flex-start;
-                background-color: yellowgreen;
-                "
-              type="submit"
-              name="action"
-            >
-              Login
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-
-          <div class="row-cols-1">
+  
             <div class="row">
               <button
-                class="waves-effect waves-light btn pulse col s12 social google"
-                (click)="onLoginGoogle()"
-                style="background-color: #E53935;
-                  color: white;"
+                class="btn  waves-effect waves-block waves-light"
+                style="align-content:flex-start;
+                  background-color: yellowgreen;
+                  "
+                type="submit"
+                name="action"
               >
-                <i class="fa fa-google" style=""></i> Iniciar sesión con google
+                Login
+                <i class="material-icons right">send</i>
               </button>
             </div>
-
-            
-          </div>
-
-          <div class="row">
-            <div class="input-field col s6 m6 l6">
-              <p class="margin medium-small">
-                <a routerLink="/register">Registrarse ahora!</a>
-              </p>
+  
+            <div class="row-cols-1">
+              <div class="row">
+                <button
+                  class="waves-effect waves-light btn col s12 social google"
+                  (click)="onLoginGoogle()"
+                  style="background-color: #E53935;
+                    color: white;"
+                >
+                  <i class="fa fa-google" style=""></i> Iniciar sesión con google
+                </button>
+              </div>
+  
+              
             </div>
-
-            <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small">
-                <a href="#">Olvido la contraseña?</a>
-              </p>
+  
+            <div class="row">
+              <div class="input-field col s6 m6 l6">
+                <p class="margin medium-small">
+                  <a routerLink="/register">Registrarse ahora!</a>
+                </p>
+              </div>
+  
+              <div class="input-field col s6 m6 l6">
+                <p class="margin right-align medium-small">
+                  <a href="#">Olvido la contraseña?</a>
+                </p>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</body>

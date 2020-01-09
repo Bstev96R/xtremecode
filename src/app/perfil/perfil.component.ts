@@ -12,6 +12,8 @@ export class PerfilComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
+  displayForm: boolean = false;
+  
   user: UserInterface = {
     name:'',
     email: '',
@@ -19,7 +21,7 @@ export class PerfilComponent implements OnInit {
   };
 
   public providerId: string = 'null';
-
+ 
   ngOnInit() {
     this.authService.isAuth().subscribe(user => {
       if (user) {
