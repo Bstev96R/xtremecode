@@ -4,6 +4,8 @@ import {CaracteristicaInterface} from '../../models/Caracteristica.interface';
 import {CaracteristicasService} from '../../services/caracteristicas.service';
 
 
+
+
 @Component({
   selector: 'app-image-list',
   templateUrl: './image-list.component.html',
@@ -17,8 +19,10 @@ export class ImageListComponent implements OnInit {
   caracteristicaToEdit: CaracteristicaInterface;
   precio: any[];
   
+  
+  
 
-  constructor( private service: ImageService, private caracteristicaService: CaracteristicasService) { 
+  constructor( private service: ImageService, private caracteristicaService: CaracteristicasService ) { 
     
   }
 
@@ -35,8 +39,15 @@ export class ImageListComponent implements OnInit {
       
     });
 
+   
+
     
   }
+   
+
+  
+  
+ 
   
   
  

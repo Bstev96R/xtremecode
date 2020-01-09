@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {  CaracteristicasService} from '../services/caracteristicas.service';
 import {CaracteristicaInterface  } from '../models/Caracteristica.interface';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { Task} from '../models/task.interface';
+import { TaskService } from '../services/task.service';
 
 @Component({
   selector: 'app-add-caracteristicas',
@@ -24,6 +26,7 @@ export class AddCaracteristicasComponent implements OnInit {
     fecha:''
 
   };
+  @Input('task') task: Task;
 
   constructor(private caracteristicaService: CaracteristicasService) { }
 
@@ -40,5 +43,11 @@ export class AddCaracteristicasComponent implements OnInit {
  
 
   }
+
+  removeTask(task : Task){
+    const response= confirm('Datos guardados');
+    
+
+ }
 
 }

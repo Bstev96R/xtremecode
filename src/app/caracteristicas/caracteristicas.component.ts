@@ -11,6 +11,7 @@ export class CaracteristicasComponent implements OnInit {
   caracteristicas: CaracteristicaInterface[];
   editState: boolean = false;
   caracteristicaToEdit: CaracteristicaInterface;
+  
 
 
   
@@ -19,6 +20,7 @@ export class CaracteristicasComponent implements OnInit {
   ngOnInit() {
     this.caracteristicaService.getCaracteristica().subscribe(caracteristicas=>{
       this.caracteristicas = caracteristicas;
+      
     })
   }
 

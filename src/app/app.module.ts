@@ -79,6 +79,8 @@ import { ChatService } from './services/chat.service';
     FeedComponent,
     ChatroomComponent,
     ChatFormComponent
+  
+    
   ],
   imports: [
     BrowserModule,
@@ -92,7 +94,7 @@ import { ChatService } from './services/chat.service';
     ReactiveFormsModule,
     AngularFirestoreModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    
   ],
   providers: [AngularFireAuth, CaracteristicasService, TaskService, ChatService],
   bootstrap: [AppComponent]
