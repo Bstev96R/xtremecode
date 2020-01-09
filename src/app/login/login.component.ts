@@ -52,4 +52,6 @@ export class LoginComponent implements OnInit {
   onLoginRedirect(): void {
     this.route.navigate(["perfil"]);
   }
+
+ 
 }

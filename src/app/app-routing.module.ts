@@ -1,3 +1,4 @@
+import { ChatroomComponent } from './chatroom/chatroom.component';
 import { CartaventaComponent } from "./cartaventa/cartaventa.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { ImageListComponent } from "./images/image-list/image-list.component";
@@ -18,6 +19,7 @@ import { TimerComponent } from "./timer/timer.component";
 import { ProductosComponent } from "./productos/productos.component";
 import { CounterComponent } from "./counter/counter.component";
 import { PreventaComponent } from "./preventa/preventa.component";
+
 
 export const routes: Routes = [
   {
@@ -84,6 +86,10 @@ export const routes: Routes = [
   {
     path: "tiempo",
     component: TimerComponent
+  },
+  {
+    path: "chatroom",
+    component: ChatroomComponent
   },
   {
     path: "image",
