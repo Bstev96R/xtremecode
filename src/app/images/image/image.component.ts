@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from "rxjs/operators";
 import { ImageService } from 'src/app/shared/image.service';
+import { Task} from '../models/task.interface';
+import { TaskService } from '../services/task.service';
+
 
 @Component({
   selector: 'app-image',
@@ -21,6 +24,8 @@ export class ImageComponent implements OnInit {
     category: new FormControl(''),
     imageUrl: new FormControl('', Validators.required)
   })
+
+  @Input('task') task: Task;
 
   constructor(private storage: AngularFireStorage, private service: ImageService) { }
 
@@ -76,6 +81,10 @@ export class ImageComponent implements OnInit {
     this.selectedImage = null;
     this.isSubmitted = false;
   }
+  removeTask(task : Task){
+    const response= confirm('Imagen Guardada');
 
+
+ }
 
 }
