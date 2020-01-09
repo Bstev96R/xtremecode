@@ -66,7 +66,6 @@ import {TaskListComponent} from './task-list/task-list.component';
     TaskComponent,
     TaskFormComponent,
     TaskListComponent,
-
     CartaventaComponent
     
   ],
@@ -82,7 +81,7 @@ import {TaskListComponent} from './task-list/task-list.component';
     ReactiveFormsModule, 
     AngularFirestoreModule,  
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+   
    
     
   ],

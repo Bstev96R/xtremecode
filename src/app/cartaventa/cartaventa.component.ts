@@ -3,8 +3,7 @@ import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { FormGroup, FormControl, FormBuilder, Form } from "@angular/forms";
 import { Input } from "./input";
 import { CaracteristicaInterface } from '../models/Caracteristica.interface';
-import {CaracteristicasService} from '../services/caracteristicas.service';
-
+import { CaracteristicasService } from '../services/caracteristicas.service';
 import * as jsPDF from "jspdf";
 
 @Component({
@@ -16,8 +15,9 @@ export class CartaventaComponent implements OnInit {
   caracteristicas: CaracteristicaInterface[];
   editState: boolean = false;
   caracteristicaToEdit: CaracteristicaInterface;
+  
   precio: any[];
-  constructor( private caracteristicaService: CaracteristicasService) {}
+  constructor(private caracteristicaService: CaracteristicasService) {}
   @ViewChild("content") content: ElementRef;
 
   public dowloandpdf() {
@@ -40,10 +40,11 @@ export class CartaventaComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     this.caracteristicaService.getCaracteristica().subscribe(caracteristicas=>{
       this.caracteristicas = caracteristicas;
-      this.precio= caracteristicas
+      this.precio= caracteristicas;
       
-    });
+    })
   }
 }

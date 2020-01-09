@@ -3,8 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from "rxjs/operators";
 import { ImageService } from 'src/app/shared/image.service';
-import { Task} from '../models/task.interface';
-import { TaskService } from '../services/task.service';
+import { Task} from '../../models/task.interface';
+
 
 
 @Component({
