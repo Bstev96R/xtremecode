@@ -1,42 +1,67 @@
-
-import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
-import * as firebase from 'firebase/app';
-   
-
-import {ChatMenssage} from '../models/chat-message.model';
+import { UserInterface } from './../models/user';
+import { Injectable } from "@angular/core";
+import { AuthService } from "./auth.service";
+import { Observable } from "rxjs";
+import { AngularFireAuth } from "@angular/fire/auth";
+import {
+  AngularFirestore,
+  AngularFirestoreCollection
+} from "@angular/fire/firestore";
+import * as firebase from "firebase/app";
+import { map } from "rxjs/operators";
+import { Mensaje } from "./../models/mensaje.interface";
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ChatService {
-  user: any;
-  chatMenssages: AngularFireList <ChatMenssage[]>;
-  chatMenssage: ChatMenssage; 
-  userName: Observable<string>;
+  private itemsCollection: AngularFirestoreCollection<Mensaje>;
 
+  public chats: Mensaje[] = [];
+  public usuario : any = {};
 
-  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) { 
-    this.afAuth.authState.subscribe(auth => {
-      if (auth !== undefined && auth !== null) {
-        this.user = auth;
+  constructor(private afs: AngularFirestore, public afAuth:AngularFireAuth) {
+
+    this.afAuth.authState.subscribe(user =>{
+      if (!user) {
+        return;
       }
+      console.log('estado del usuario', user)
+      this.usuario.name = user.displayName;
+      this.usuario.uid = user.uid;
     })
   }
 
-  sendMenssage(msg: string){
-    const timestamp = this.getTimeStamp();
-    const email = this.user.email;
-    this.chatMenssages = this.getMessages();
-    this.chatMenssages = this.push({
-      message: msg, 
-      timeSent : timestamp,
-      userName: this.userName,
-      emial: email
-    });
+  
+
+  loadMensajes() {
+    this.itemsCollection = this.afs.collection<Mensaje>("chats", ref =>
+      ref.orderBy("fecha", "desc").limit(5)
+    );
+
+    return this.itemsCollection.valueChanges().pipe(
+      map((mensajes: Mensaje[]) => {
+        console.log(mensajes);
+        this.chats = mensajes;
+        this.chats = [];
+
+        for (let mensaje of mensajes) {
+          this.chats.unshift(mensaje);
+        }
+          return this.chats;
+      })
+    );
+  }
+
+  addMensaje(texto: string) {
+    let mensaje: Mensaje = {
+      nombre: this.usuario.name,
+      mensaje: texto,
+      fecha: new Date().getTime(),
+      uid: this.usuario.uid
+    };
+
+    return this.itemsCollection.add(mensaje);
   }
 }

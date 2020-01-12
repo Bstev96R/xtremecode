@@ -1,3 +1,4 @@
+import { ChatService } from './../services/chat.service';
 import { Component, OnInit } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { auth } from "firebase/app";
@@ -5,6 +6,8 @@ import { Router } from "@angular/router";
 import { AuthService } from "../services/auth.service";
 import { NgForm } from "@angular/forms/src/directives/ng_form";
 import {NgModule} from '@angular/core';
+
+
 
 @Component({
   selector: "app-login",
@@ -17,9 +20,10 @@ export class LoginComponent implements OnInit {
   constructor(
     public afAuth: AngularFireAuth,
     private route: Router,  
-    private authService: AuthService
+    private authService: AuthService,
+    public _cs: ChatService
   ) {}
-
+ 
   public email: string = '';
   public password: string = '';
   ngOnInit() {}
@@ -36,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   onLoginGoogle(): void {
     //this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-    this.authService
+     this.authService
       .LoginGoogleUser()
       .then(res => {
         console.log("resUser", res);

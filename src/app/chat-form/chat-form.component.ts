@@ -8,21 +8,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-form.component.css']
 })
 export class ChatFormComponent implements OnInit {
-  menssage: string;
+  
+  mensaje : string = "";
+  elemento: any;
 
-  constructor (private chat: ChatService) {
-
+  constructor (public _cs: ChatService) {
+    this._cs.loadMensajes()
+        .subscribe(()=>{
+          setTimeout(() => {
+            this.elemento.scrollTop = this.elemento.scrollHeight;
+          }, 20);
+          
+        });
    }
-  ngOnInit() {
+
+   ngOnInit() {
+     this.elemento = document.getElementById('app-mensajes');
   }
 
-  send(){
-    this.chat.sendMenssage(this.menssage)
-  }
-  handleSubmit(event){
-     if (event.keyCode === 13) {
-       this.send();     
+   enviar_mensaje(){
+     console.log(this.mensaje)
+
+     if (this.mensaje.length === 0) {
+       return;
+       
      }
-  }
+
+     this._cs.addMensaje(this.mensaje)
+             .then(()=> this.mensaje = "")
+             .catch((err)=> console.error('Error al enviar', err));
+   }
+
+
+  
+
 
 }
