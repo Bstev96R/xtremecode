@@ -12,11 +12,7 @@ import * as jsPDF from "jspdf";
   styleUrls: ["./cartaventa.component.css"]
 })
 export class CartaventaComponent implements OnInit {
-  caracteristicas: CaracteristicaInterface[];
-  editState: boolean = false;
-  caracteristicaToEdit: CaracteristicaInterface;
-  
-  precio: any[];
+ 
   constructor(private caracteristicaService: CaracteristicasService) {}
   @ViewChild("content") content: ElementRef;
 
@@ -41,10 +37,7 @@ export class CartaventaComponent implements OnInit {
 
   ngOnInit() {
     
-    this.caracteristicaService.getCaracteristica().subscribe(caracteristicas=>{
-      this.caracteristicas = caracteristicas;
-      this.precio= caracteristicas;
-      
-    })
+   
+    
   }
 }
