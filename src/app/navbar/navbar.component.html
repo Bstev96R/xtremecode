@@ -1,4 +1,4 @@
-<nav class="nav-extended " style="background-color: rgba(0,0,0, 0.7);">
+<nav id="navbar" class="nav-extended " style="background-color: rgba(0,0,0, 0.7)">
   <div class="nav-wrapper">
     <a><img id="logo" src="../../assets/img/Suga-Logo copy2.png"/></a>
 
@@ -7,7 +7,6 @@
         <a id="home" routerLink="/image/list"> Subasta </a>
       </li>
 
-      <li><a id="home">Oferta Individual</a></li>
       <li *ngIf="!isLogged"><a id="home" routerLink="/login">Login</a></li>
 
       <li><a id="home" routerLink="/perfil" >Perfil</a></li>

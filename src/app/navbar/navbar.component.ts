@@ -5,6 +5,8 @@ import {Location,LocationStrategy,PathLocationStrategy} from '@angular/common';
 import {AuthService} from '../services/auth.service';
 import {AngularFireAuth} from '@angular/fire/auth';
 import { auth } from 'firebase';
+import { UserInterface } from './../models/user';
+
 
 
 
@@ -46,11 +48,25 @@ export class NavbarComponent implements OnInit {
   onLogoutGoogle(){
     this.afsAuth.auth.signOut();
  }
+ user: UserInterface = {
+    name:'',
+    email: '',
+    photoUrl:''
+  };
   ngOnInit() {
     const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
 
         this.getCurrentUser();
+
+        this.authService.isAuth().subscribe(user => {
+            if (user) {
+              this.user.name = user.displayName;
+              this.user.email = user.email;
+              this.user.photoUrl = user.photoURL;
+              
+            }
+          })
    
   }
 

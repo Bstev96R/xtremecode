@@ -1,4 +1,4 @@
-<h3>Chat</h3>
+<h2  style="text-align: center; color: white; text-shadow:2px 2px 2px gray;">SugaChats</h2>
 <hr />
 <div class="app-mensajes" id="app-mensajes">
 
@@ -6,12 +6,12 @@
         [ngClass]="{'text-right': _cs.usuario.uid == chat.uid}"
   >
     <span 
-          [ngClass]="{'badge-primary': _cs.usuario.uid == chat.uid,
+          [ngClass]="{'badge-danger': _cs.usuario.uid == chat.uid,
                     'badge-success': _cs.usuario.uid != chat.uid}"
     >
     {{chat.nombre}}</span>
     
-    <p>
+    <p style="color: white; text-shadow:1px 1px 1px black;">
       {{chat.mensaje}}
     </p>
   </div>
@@ -41,6 +41,7 @@
       class="form-control"
       (keyup.enter)="enviar_mensaje()"
       placeholder="Enviar mensaje..."
+      autofocus
     />
   </div>
 </div>
