@@ -1,1 +1,17 @@
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+
+.card-content p
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-title
+{
+    box-sizing: border-box;
+}
+.row img{
+    width: 400px;
+    height: 200px;
+}
