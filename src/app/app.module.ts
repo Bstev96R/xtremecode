@@ -16,6 +16,8 @@ import { FormsModule } from "@angular/forms";
 
 import { NavbarComponent } from "./navbar/navbar.component";
 import { CarouselComponent } from "./carousel/carousel.component";
+import {Carousel2Component} from "./carousel2/carousel2.component";
+import { Carousel3Component } from './carousel3/carousel3.component';
 import { LoginComponent } from "./login/login.component";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -33,6 +35,7 @@ import { ProductosComponent } from "./productos/productos.component";
 import { CounterComponent } from "./counter/counter.component";
 import { PreventaComponent } from "./preventa/preventa.component";
 import { CartaventaComponent } from "./cartaventa/cartaventa.component";
+
 
 import { TaskService } from "./services/task.service";
 import { TaskComponent } from "./task/task.component";
@@ -57,6 +60,8 @@ import { ChatService } from './services/chat.service';
     ImageListComponent,
     NavbarComponent,
     CarouselComponent,
+    Carousel2Component,
+    Carousel3Component,
     FooterComponent,
     LoginComponent,
     RazaComponent,
@@ -79,8 +84,6 @@ import { ChatService } from './services/chat.service';
     FeedComponent,
     ChatroomComponent,
     ChatFormComponent
-  
-    
   ],
   imports: [
     BrowserModule,
