@@ -50,6 +50,7 @@ import { UserItemComponent } from "./user-item/user-item.component";
 import { MessageComponent } from "./message/message.component";
 
 import { ChatService } from './services/chat.service';
+import {SubastaNComponent} from './subasta-n/subasta-n.component';
 
 
 @NgModule({
@@ -83,7 +84,8 @@ import { ChatService } from './services/chat.service';
     UserListComponent,
     FeedComponent,
     ChatroomComponent,
-    ChatFormComponent
+    ChatFormComponent,
+    SubastaNComponent
   ],
   imports: [
     BrowserModule,
