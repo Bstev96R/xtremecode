@@ -1,5 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { CommonModule } from '@angular/common';
+
+ 
+
 
 import { AppComponent } from "./app.component";
 import { ImagesComponent } from "./images/images.component";
@@ -51,6 +55,12 @@ import { MessageComponent } from "./message/message.component";
 
 import { ChatService } from './services/chat.service';
 import {SubastaNComponent} from './subasta-n/subasta-n.component';
+import {EmployeesComponent} from "./employees/employees.component";
+import { EmployeeComponent} from "./employees/employee/employee.component";
+import{EmployeeListComponent} from "./employees/employee-list/employee-list.component";
+import { EmployeeService } from "./shared/employee.service";
+
+
 
 
 @NgModule({
@@ -85,7 +95,10 @@ import {SubastaNComponent} from './subasta-n/subasta-n.component';
     FeedComponent,
     ChatroomComponent,
     ChatFormComponent,
-    SubastaNComponent
+    SubastaNComponent,
+    EmployeesComponent,
+    EmployeeComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
@@ -98,10 +111,12 @@ import {SubastaNComponent} from './subasta-n/subasta-n.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
-    FormsModule,
+    FormsModule, 
+    CommonModule
+   
     
   ],
-  providers: [AngularFireAuth, CaracteristicasService, TaskService, ChatService],
+  providers: [AngularFireAuth, CaracteristicasService, TaskService, ChatService,EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
