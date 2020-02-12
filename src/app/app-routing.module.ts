@@ -19,9 +19,15 @@ import { TimerComponent } from "./timer/timer.component";
 import { ProductosComponent } from "./productos/productos.component";
 import { CounterComponent } from "./counter/counter.component";
 import { PreventaComponent } from "./preventa/preventa.component";
+import{SubastaNComponent} from "./subasta-n/subasta-n.component";
 
 
 export const routes: Routes = [
+
+  {
+    path:"subastaN",
+    component: SubastaNComponent
+  },
   {
     path: "preventa",
     component: PreventaComponent
