@@ -1,3 +1,4 @@
+<body>
 <div style="background-color: #4C4C4C; padding-top:120px;">
   <img
     style="position: absolute; 
@@ -11,13 +12,16 @@
     alt="profile"
     (click)="displayForm = !displayForm"
   />
+  <a href="#" routerLink="/chatroom">
+    <span class="front">Suga</span>
+    <span class="center"></span>
+    <span class="back">Chats</span>
+  </a>
 </div>
 
 <br />
 <br />
 <br />
-
-
 
 <section
   id="profile"
@@ -47,7 +51,7 @@
             alt="profile"
           />
           <h6
-            style="color: rgb(34, 33, 33); font-family: sans-serif;
+            style="color: #656768; font-family: sans-serif;
               font-weight: bold;
               "
             *ngIf="providerId != 'password'"
@@ -56,7 +60,7 @@
           </h6>
 
           <h6
-            style="color: rgb(34, 33, 33); 
+            style="color:#656768; 
             font-family: sans-serif;
             font-weight: bold;
             "
@@ -69,8 +73,6 @@
   </div>
 </section>
 
-<div class="banner">
-  <video src="#">
-    <source src="../../assets/img/suganic.mp4" type="video/mp4">
-  </video>
-</div>
+
+</body>
+
