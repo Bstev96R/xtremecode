@@ -1,3 +1,10 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -5,9 +12,9 @@
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
   
+    
     <div class="form-group">
-      <input name="oferta" #fullName="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="oferta" required>
-      
+      <input name="oferta" #oferta="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="Oferta">
     </div>
   
 
