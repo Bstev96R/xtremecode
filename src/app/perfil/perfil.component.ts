@@ -2,6 +2,10 @@ import { UserInterface } from './../models/user';
 import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
+import {AngularFireAuth} from '@angular/fire/auth';
+import { auth } from 'firebase';
+
+
 
 @Component({
   selector: 'app-perfil',
@@ -10,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private afsAuth: AngularFireAuth) { }
 
   displayForm: boolean = false;
   
@@ -32,5 +36,7 @@ export class PerfilComponent implements OnInit {
       }
     })
   }
-
+  onLogoutGoogle(){
+    this.afsAuth.auth.signOut();
+ }
 }

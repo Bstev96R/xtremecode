@@ -7,7 +7,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import { auth } from 'firebase';
 import { UserInterface } from './../models/user';
 
-
+ 
 
 
 declare var $: any;
