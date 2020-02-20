@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { EmployeeService } from 'src/app/shared/employee.service';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserInterface } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { Employee} from '../../shared/employee.model';
+import {TimerComponent} from '../../timer/timer.component';
 
 
 
@@ -15,10 +16,15 @@ import { Employee} from '../../shared/employee.model';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  @ViewChild('counter', {read:TimerComponent})
+  private counter: TimerComponent;
+
+  counterState = 'cronometro de subasta';
   
  comp: string;
  displayForm: boolean = false;
-  
+ofertaM: string;
+cont:number=0;
   user: UserInterface = {
     name:'',
     email: '',
@@ -42,6 +48,15 @@ export class EmployeeComponent implements OnInit {
       }
     })
 
+
+    this.counter.startAt = 120;
+    this.counter.counterState.subscribe((msg)=>{
+      if(msg==='COMPLETE') {
+        this.counterState = 'tiempo terminado';
+      }
+    });
+    this.counter.start();
+
    
   }
 
@@ -62,11 +77,18 @@ export class EmployeeComponent implements OnInit {
     
     delete data.id;
     data.fullName= this.user.name;
+    this.ofertaM=data.oferta
+    this.cont++;
+    console.log(this.ofertaM);
+    
    
     
     if (form.value.id == null)
-
       this.firestore.collection('employees').add(data);
+      
+    
+
+     
 
        
 
@@ -74,9 +96,21 @@ export class EmployeeComponent implements OnInit {
       this.firestore.doc('employees/' + form.value.id).update(data);
 
     this.resetForm(form);
+    
+      
+
+  
    
     
     
+    
+  }
+ 
+  
+    
+      
+    
+      
     
   }
 

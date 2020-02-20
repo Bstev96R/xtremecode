@@ -30,7 +30,7 @@
         <div class="card">
           <td *ngIf="imageList[3 * i]">
             <div class="imagebox">
-              <img [src]="imageList[3 * i].imageUrl" class="img-fluid" />
+              <img routerLink="/subastaN" [src]="imageList[3 * i].imageUrl" class="img-fluid" />
               <span class="imagebox-desc">{{ imageList[3 * i].caption }} <br>
                 <span>tiempo restante: 1days:12hrs:34seconds</span>
               </span>
