@@ -46,7 +46,7 @@ cont:number=0;
         this.user.photoUrl = user.photoURL;
         this.providerId = user.providerData[0].providerId;
       }
-    })
+    });
 
 
     this.counter.startAt = 120;

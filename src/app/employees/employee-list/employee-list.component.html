@@ -16,10 +16,29 @@
       <td>
         <h2>oferta ganadora: 
         </h2>
+        <h3 style="visibility: hidden;">{{user.name}}</h3>
       </td>
-      <div *ngIf="">
+      <div *ngIf="user.name=='Bryan Rodriguez', else contrario">
         <td>
+         
+          <h3>Bryan Rodriguez</h3>
         
+      </td>
+      <td>
+        <h3>
+          $400
+        </h3>
+      </td>
+
+      <td>
+        <button routerLink="/carven" type="button" class="btn btn-success">Carta de venta</button>
+      </td>
+
+      </div>
+
+      <ng-template #contrario>
+        <td>
+         
           <h3>bryan rodriguez</h3>
         
       </td>
@@ -30,12 +49,10 @@
       </td>
 
       <td>
-        <a  routerLink="/carven" class="btn " >
-          <i >carta  de venta</i>
-        </a>
+        <button routerLink="/carven" type="button" class="btn btn-success" disabled>Carta de venta</button>
       </td>
 
-      </div>
+      </ng-template>
      
       
     </tr>
