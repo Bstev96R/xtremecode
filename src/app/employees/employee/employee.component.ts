@@ -23,7 +23,7 @@ export class EmployeeComponent implements OnInit {
   
  comp: string;
  displayForm: boolean = false;
-ofertaM: string;
+ofertaM: string='';
 cont:number=0;
   user: UserInterface = {
     name:'',
@@ -77,9 +77,18 @@ cont:number=0;
     
     delete data.id;
     data.fullName= this.user.name;
-    this.ofertaM=data.oferta
+    if(data.oferta==this.ofertaM ||data.oferta<this.ofertaM){
+      
+      console.log('no valido');
+    }
+    else{
+      this.ofertaM=data.oferta;
+      
+      console.log(this.ofertaM);
+    }
+    
     this.cont++;
-    console.log(this.ofertaM);
+    
     
    
     

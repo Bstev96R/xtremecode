@@ -4,19 +4,33 @@
   <div class="counter-wrapper">
     <app-timer #counter></app-timer>
     </div>
-    <div  style="color: black;">{{counterState}}</div>
+    <div   style="color: black;">{{counterState}}</div>
+  
+    <div *ngIf="counterState=='cronometro de subasta'; else validacion">
+      <div class="form-group">
+        <input name="oferta" #oferta="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="Oferta">
+      </div>
+    
   
     
-    <div class="form-group">
-      <input name="oferta" #oferta="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="Oferta">
+      <div class="form-group">
+       
+        <button  type="submit"  class="btn btn-lg btn-block btn-info">Ofertar</button>
+      </div>
     </div>
+    <ng-template #validacion>
+      <div class="form-group">
+        <input name="oferta" #oferta="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="Oferta">
+      </div>
+    
   
-
-  
-    <div class="form-group">
-     
-      <button  type="submit"  class="btn btn-lg btn-block btn-info">Ofertar</button>
-    </div>
+    
+      <div class="form-group">
+       
+        <button  type="submit"  class="btn btn-lg btn-block btn-info" disabled>Ofertar</button>
+      </div>
+    </ng-template>
+   
     
 
   
