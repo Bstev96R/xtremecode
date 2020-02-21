@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserInterface } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
-import { Employee} from '../../shared/employee.model';
+
 import {TimerComponent} from '../../timer/timer.component';
 
 
