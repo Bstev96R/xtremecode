@@ -60,6 +60,13 @@
   </tbody>
 </table>
 
+<div *ngFor="let mayor of list">
+<div *ngIf="mayor.oferta=='600'">
+  <span>{{mayor.fullName}}</span>
+  <span>{{mayor.oferta}}</span>
+</div>
+</div>
+
 
 <table class="table table-hover">
   <thead>

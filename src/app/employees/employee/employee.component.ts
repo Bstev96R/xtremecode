@@ -16,6 +16,7 @@ import {TimerComponent} from '../../timer/timer.component';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  pre:string= '350';
   @ViewChild('counter', {read:TimerComponent})
   private counter: TimerComponent;
 
@@ -67,6 +68,7 @@ cont:number=0;
       id: null,
       fullName: '',
       oferta: '',
+   
 
     }
   }
