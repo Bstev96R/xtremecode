@@ -48,10 +48,4 @@ export class EmployeeListComponent implements OnInit {
 }
 
 
-  }
- 
-    
- 
-    
-
 }
