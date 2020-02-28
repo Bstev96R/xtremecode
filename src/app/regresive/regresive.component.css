@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans|Oxanium&display=swap');
+
+.timer
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    
+}
+
+.timer .unit
+{
+    padding: 2em;
+    
+}
+
+.timer .unit strong
+{
+    display: block;
+    font-size: 2rem;
+    font-family: 'Oxanium';
+}
+.timer .unit span 
+{
+    font-family: 'Oxanium';
+}
+.countbox
+{
+    background-color: crimson;
+}
+h2
+{
+    text-align: center;
+    color: crimson;
+    box-shadow: gray gray gray;
+    font-family: 'Odibee Sans', ;
+}
+.sp
+{
+    justify-content: center;
+    padding-top: 4.5%;
+    font-size: 2rem;
+    font-family: 'Odibee Sans', ;
+}

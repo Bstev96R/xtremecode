@@ -1,3 +1,4 @@
+import { RegresiveComponent } from './regresive/regresive.component';
 import { CarrbanComponent } from './carrban/carrban.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { CartaventaComponent } from "./cartaventa/cartaventa.component";
@@ -27,6 +28,7 @@ import {EmployeeListComponent} from "./employees/employee-list/employee-list.com
 
 
 
+
 export const routes: Routes = [
   {
     path:"employees",
@@ -35,6 +37,10 @@ export const routes: Routes = [
   {
     path:"employee",
     component: EmployeeComponent
+  },
+  {
+    path: "regresive",
+    component: RegresiveComponent
   },
   {
     path:"employeelist",
