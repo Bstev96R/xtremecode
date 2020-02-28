@@ -3,10 +3,7 @@
     <span class="card-title">Registro Bovino</span>
     <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm" class="col s6">
       <div class="row">
-        <div class="input-field col s6">
-          <input [(ngModel)]="caracteristicas.Propietario" #Propietario="ngModel" type="text" name="propietario" id="propietario" placeholder="Nombre del propietario">
-          <label>Propietario</label>
-        </div>
+       
 
         <div class="input-field col s6">
           <input  [(ngModel)]="caracteristicas.Departamento" #Departamento="ngModel" type="text" name="Departamento" id="Departamento" placeholder="Departamento">

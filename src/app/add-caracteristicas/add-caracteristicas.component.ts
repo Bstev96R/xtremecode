@@ -12,7 +12,7 @@ import { TaskService } from '../services/task.service';
 })
 export class AddCaracteristicasComponent implements OnInit {
   caracteristicas: CaracteristicaInterface = {
-      Propietario: '',
+      
     Departamento: '',
     Municipio: '',
     Comarca: '',

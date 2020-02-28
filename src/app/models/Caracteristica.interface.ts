@@ -1,6 +1,6 @@
 export interface CaracteristicaInterface {
     id?: string;
-    Propietario?: string;
+   
     Departamento?: string;
     Municipio?: string;
     Comarca?: string;
