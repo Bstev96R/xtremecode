@@ -59,6 +59,7 @@ import {EmployeesComponent} from "./employees/employees.component";
 import { EmployeeComponent} from "./employees/employee/employee.component";
 import{EmployeeListComponent} from "./employees/employee-list/employee-list.component";
 import { EmployeeService } from "./shared/employee.service";
+import {PaymeComponent} from './payme/payme.component';
 
 
 
@@ -98,7 +99,8 @@ import { EmployeeService } from "./shared/employee.service";
     SubastaNComponent,
     EmployeesComponent,
     EmployeeComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    PaymeComponent
   ],
   imports: [
     BrowserModule,

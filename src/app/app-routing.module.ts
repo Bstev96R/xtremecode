@@ -23,9 +23,13 @@ import{SubastaNComponent} from "./subasta-n/subasta-n.component";
 import{EmployeesComponent} from "./employees/employees.component";
 import {EmployeeComponent} from "./employees/employee/employee.component";
 import {EmployeeListComponent} from "./employees/employee-list/employee-list.component";
-
+import {PaymeComponent} from './payme/payme.component';
 
 export const routes: Routes = [
+  {
+   path:"payme",
+   component: PaymeComponent
+  },
   {
     path:"employees",
     component: EmployeesComponent

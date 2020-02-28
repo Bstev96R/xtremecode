@@ -10,62 +10,31 @@
 <br>
 <br>
 <br>
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <h2>oferta ganadora: 
-        </h2>
-        <h3 style="visibility: hidden;">{{user.name}}</h3>
-      </td>
-      <div *ngIf="user.name=='Bryan Rodriguez', else contrario">
-        <td>
-         
-          <h3>Bryan Rodriguez</h3>
-        
-      </td>
-      <td>
-        <h3>
-          $400
-        </h3>
-      </td>
 
-      <td>
-        <button routerLink="/carven" type="button" class="btn btn-success">Carta de venta</button>
-      </td>
-
-      </div>
-
-      <ng-template #contrario>
-        <td>
-         
-          <h3>bryan rodriguez</h3>
-        
-      </td>
-      <td>
-        <h3>
-          $400
-        </h3>
-      </td>
-
-      <td>
-        <button routerLink="/carven" type="button" class="btn btn-success" disabled>Carta de venta</button>
-      </td>
-
-      </ng-template>
-     
-      
-    </tr>
-
-  </tbody>
-</table>
-
-<div *ngFor="let mayor of list">
-<div *ngIf="mayor.oferta=='600'">
-  <span>{{mayor.fullName}}</span>
-  <span>{{mayor.oferta}}</span>
+<span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Oferta ganadora fue del Usuario:  </span>
+<div *ngFor="let x of list">
+<div *ngIf="x.oferta=='500'; else opcion">
+  <span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;{{x.fullName}}</span>
+  <span>  con $ {{x.oferta}}</span>
+  
 </div>
+<ng-template #opcion>
+  <div *ngIf="x.oferta>'500'">
+   
+    <span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; {{x.fullName}}</span>
+    <span> con $ {{x.oferta}}</span>
+  </div>
+</ng-template>
 </div>
+<div>
+  <button style="width: 50%; margin-left: 30%;" type="button" class="btn btn-primary btn-lg btn-block">Pagar</button>
+  <button style="width: 50%; margin-left: 30%;" type="button" class="btn btn-secondary btn-lg btn-block">Generar carta de venta</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 <table class="table table-hover">
@@ -80,12 +49,7 @@
       <td (click)="onEdit(emp)">{{emp.fullName}}</td>
       <td (click)="onEdit(emp)">{{emp.empCode}}  {{emp.oferta}}</td>
       
-      <td>
-        <a class="btn " (click)="onDelete(emp.id)">
-          <i class="fa fa-trash"></i>
-        </a>
-
-      </td>
+ 
     </tr>
 
     
@@ -93,3 +57,4 @@
     
   </tbody>
 </table>
+
