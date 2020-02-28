@@ -1,3 +1,4 @@
+import { CarrbanComponent } from './carrban/carrban.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { CartaventaComponent } from "./cartaventa/cartaventa.component";
 import { AuthGuard } from "./guards/auth.guard";
@@ -24,6 +25,7 @@ import{EmployeesComponent} from "./employees/employees.component";
 import {EmployeeComponent} from "./employees/employee/employee.component";
 import {EmployeeListComponent} from "./employees/employee-list/employee-list.component";
 import {PaymeComponent} from './payme/payme.component';
+
 
 export const routes: Routes = [
   {
@@ -61,6 +63,10 @@ export const routes: Routes = [
     path: "producto",
     component: ProductosComponent
   },
+  {
+    path: "carrban",
+    component: CarrbanComponent
+  },
 
   {
     path: "carousel",
@@ -69,7 +75,7 @@ export const routes: Routes = [
   {
     path: "raza",
     component: RazaComponent,
-    canActivate: [AuthGuard]
+    
   },
   {
     path: "login",

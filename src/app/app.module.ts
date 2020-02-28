@@ -1,3 +1,4 @@
+import { RegresiveComponent } from './regresive/regresive.component';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
@@ -39,6 +40,7 @@ import { ProductosComponent } from "./productos/productos.component";
 import { CounterComponent } from "./counter/counter.component";
 import { PreventaComponent } from "./preventa/preventa.component";
 import { CartaventaComponent } from "./cartaventa/cartaventa.component";
+import { CarrbanComponent } from './carrban/carrban.component';
 
 
 import { TaskService } from "./services/task.service";
@@ -100,7 +102,9 @@ import {PaymeComponent} from './payme/payme.component';
     EmployeesComponent,
     EmployeeComponent,
     EmployeeListComponent,
-    PaymeComponent
+    PaymeComponent,
+    CarrbanComponent,
+   RegresiveComponent
   ],
   imports: [
     BrowserModule,

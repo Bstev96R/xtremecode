@@ -29,7 +29,6 @@ export class EmployeeListComponent implements OnInit {
       this.list = actionArray.map(item => {
         return {
           id: item.payload.doc.id,
-          ...item.payload.doc.data()
         } as Employee;
       })
     });
@@ -47,20 +46,7 @@ export class EmployeeListComponent implements OnInit {
  
 }
 
-onEdit(emp: Employee) {
-  this.service.formData = Object.assign({}, emp);
-}
-
-
-  
-onDelete(id: string) {
-  if (confirm("Are you sure to delete this record?")) {
-    this.firestore.doc('employees/' + id).delete();
-   
-  }
-}
-    
- 
     
 
 }
+
