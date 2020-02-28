@@ -11,9 +11,9 @@
 
 <div class="container"  *ngIf="!paidFor">
 
-  <h1 style="margin-left: 20%;">Suspcricion mensual - ${{ product.price }}</h1>
+  
 
-  <p style="margin-left: 40%;">{{ product.description }}</p>
+  
 
   <img style="margin-left: 40%;" width="400" [src]="product.img">
 
@@ -27,6 +27,3 @@
 
 
 <div style="margin-left: 30%;" [hidden]="paidFor" #paypal></div>
-<div>
-  <button routerLink="/crud2" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-primary btn-lg btn-block">Siguiente</button>
-</div>

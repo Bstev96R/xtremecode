@@ -1,18 +1,18 @@
 import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
-declare var paypal
+declare var paypal;
 @Component({
-  selector: 'app-payme',
-  templateUrl: './payme.component.html',
-  styleUrls: ['./payme.component.css']
+  selector: 'app-payme-s',
+  templateUrl: './payme-s.component.html',
+  styleUrls: ['./payme-s.component.css']
 })
-export class PaymeComponent implements OnInit {
-  
-  @ViewChild('paypal') paypalElement: ElementRef;
+export class PaymeSComponent implements OnInit {
+
+  @ViewChild('paypal' ) paypalElement: ElementRef;
 
   product = {
     price: 20.00,
     description: 'Obten el plan y disfruta todos sus beneficios',
-    img: '../../assets/img/log.jpg'
+    img: '../../assets/img/razas/holstein.jpg'
   };
   paidFor=false;
   constructor() { }
@@ -44,8 +44,7 @@ export class PaymeComponent implements OnInit {
       }
     })
     .render(this.paypalElement.nativeElement);
+
   }
+
 }
-  
-
-

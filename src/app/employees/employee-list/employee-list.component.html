@@ -11,11 +11,11 @@
 <br>
 <br>
 
-<span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Oferta ganadora fue del Usuario:  </span>
+<h2>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Oferta ganadora fue del Usuario:  </h2>
 <div *ngFor="let x of list">
 <div *ngIf="x.oferta=='500'; else opcion">
-  <span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;{{x.fullName}}</span>
-  <span>  con $ {{x.oferta}}</span>
+  <h3>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;{{x.fullName}} con $ {{x.oferta}}</h3>
+ 
   
 </div>
 <ng-template #opcion>
@@ -27,8 +27,8 @@
 </ng-template>
 </div>
 <div>
-  <button style="width: 50%; margin-left: 30%;" type="button" class="btn btn-primary btn-lg btn-block">Pagar</button>
-  <button style="width: 50%; margin-left: 30%;" type="button" class="btn btn-secondary btn-lg btn-block">Generar carta de venta</button>
+  <button routerLink="/paymeS" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-primary btn-lg btn-block">Pagar</button>
+  <button routerLink="/carven" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-secondary btn-lg btn-block">Generar carta de venta</button>
 </div>
 <br>
 <br>
