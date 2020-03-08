@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|IBM+Plex+Serif|Nanum+Gothic|Patua+One|Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+
+h1
+{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: gray;
+    color: #fff;
+    background-color:crimson;
+    border: 1px solid #CCC;
+}
+h4
+{
+    text-align: center;
+    text-decoration:solid;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #904130;
+}
+
+button
+{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+img
+{
+   
+}

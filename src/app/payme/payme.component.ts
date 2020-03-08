@@ -11,7 +11,7 @@ export class PaymeComponent implements OnInit {
 
   product = {
     price: 20.00,
-    description: 'Obten el plan y disfruta todos sus beneficios',
+    description: 'Obtén el plan y disfruta todos sus beneficios',
     img: '../../assets/img/log.jpg'
   };
   paidFor=false;
