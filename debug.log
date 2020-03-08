@@ -2,3 +2,4 @@
 [0210/012605.826:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
 [0210/012606.748:ERROR:exception_snapshot_win.cc(98)] thread ID 2212 not found in process
 [0210/012606.748:ERROR:exception_snapshot_win.cc(98)] thread ID 11728 not found in process
+[0308/111855.170:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
