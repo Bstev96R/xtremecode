@@ -15,13 +15,8 @@
 
   <div *ngIf="counterState == 'cronometro de subasta'; else validacion">
     <div class="form-group">
-      <input
-        name="oferta"
-        #oferta="ngModel"
-        [(ngModel)]="service.formData.oferta"
-        class="form-control"
-        placeholder="Oferta"
-      />
+      <input name="oferta" #oferta="ngModel"[(ngModel)]="service.formData.oferta"class="form-control"placeholder="Ofertase"/>
+     
       <div *ngIf="oferta.value == ''; else denegar"></div>
       <ng-template #denegar>
         <div *ngIf="oferta.value < '350'" class="validation-error">
