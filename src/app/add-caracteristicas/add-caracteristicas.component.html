@@ -1,68 +1,68 @@
 <div class="card" style="padding-top: 110px;">
-  <div class="card-content">
-    <span class="card-title">Registro Bovino</span>
-    <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm" class="col s6">
-      <div class="row">
-       
-
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Departamento" #Departamento="ngModel" type="text" name="Departamento" id="Departamento" placeholder="Departamento">
-          <label>Departamento</label>
+  <div class="content">
+    <span class="title">Registro Bovino</span>
+    <div class="container">
+      <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Raza</label>
+          <input [(ngModel)]="caracteristicas.Raza" #Raza="ngModel" type="text" class="form-control" id="Raza"  name="Raza" placeholder="Raza">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Peso</label>
+          <input  [(ngModel)]="caracteristicas.Peso" #Peso="ngModel" id="Peso" type="text" name="Peso" class="form-control"  placeholder="KG">
         </div>
       </div>
-
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Municipio" #Municipio="ngModel" type="text" name="Municipio" id="Municipio" placeholder="Municipio">
-          <label>Municipio</label>
+      <div class="form-group">
+        <label for="inputAddress">Establecimiento</label>
+        <input [(ngModel)]="caracteristicas.Finca" #Finca="ngModel" type="text" class="form-control" id="finca" name="finca" placeholder="Finca">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Arete</label>
+        <input [(ngModel)]="caracteristicas.Chapa" #Chapa="ngModel" type="text" class="form-control" id="Arete" name="Arete" placeholder="Numeración">
+      </div>
+      <div class="form-row">
+      
+        <div class="form-group col-md-4">
+          <label for="inputState">Departamento</label>
+          <select [(ngModel)]="caracteristicas.Departamento" #Departamento="ngModel" id="Departamento" name="Departamento" class="form-control">
+            <option selected></option>
+            <option>Chontales</option>
+             <option>...</option>
+              <option>...</option>
+               <option>...</option>
+          </select>
         </div>
-
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Comarca" #Comarca="ngModel" type="text" name="Comarca" id="Comarca" placeholder="Comarca">
-          <label>Comarca</label>
+      
+        <div class="form-group col-md-4">
+          <label for="inputCity">Ciudad</label>
+          <select  [(ngModel)]="caracteristicas.Municipio" #Municipio="ngModel" id="Municipio" name="Municipio" class="form-control">
+            <option selected></option>
+            <option>juigalpa</option>
+            <option>...</option>
+            <option>...</option>
+            <option>...</option>
+          </select>
+        </div>
+      
+        <div class="form-group col-md-4">
+          <label for="inputZip">Comarca</label>
+          <input [(ngModel)]="caracteristicas.Comarca" #Comarca="ngModel" type="text" class="form-control" id="Comarca" name="Comarca">
         </div>
       </div>
-
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Finca" #Finca="ngModel" type="text" name="finca" id="finca" placeholder="Nombre del establecimiento">
-          <label>Finca</label>
+      
+       <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Precio</label>
+          <input [(ngModel)]="caracteristicas.Precio" #Precio="ngModel" type="text" class="form-control" id="Precio" name="Precio" placeholder="$">
         </div>
-
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Chapa" #Chapa="ngModel" type="text" name="Arete" id="Arete" placeholder="numero de indentificacion">
-          <label>Chapa</label>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Color</label>
+          <input [(ngModel)]="caracteristicas.Color" #Color="ngModel" type="text" class="form-control" id="Color" name="Color" placeholder="">
         </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Raza" #Raza="ngModel" type="text" name="Raza" id="Raza" placeholder="Raza del ejemplar">
-          <label>Raza</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Color" #Color="ngModel" type="text" name="Color" id="Color" placeholder="Color">
-          <label>Color</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Peso" #Peso="ngModel" type="text" name="Peso" id="Peso" placeholder="peso en kg">
-          <label>Peso</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Precio" #Precio="ngModel" type="text" name="Precio" id="Precio" placeholder="precio por kilo">
-          <label>Precio</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input  [(ngModel)]="caracteristicas.Descripcion" #Descripcion="ngModel" type="text" name="Antecedentes" id="Antecedentes" placeholder="descripcion de Antecedentes">
-          <label>Descripcion</label>
+         <div class="form-group col-md-12">
+          <label for="inputPassword4">Descripción</label>
+          <input [(ngModel)]="caracteristicas.Descripcion" #Descripcion="ngModel" type="text" class="form-control" id="Antecedentes" name="Antecedentes" placeholder="Antecedentes">
         </div>
       </div>
       <button  routerLink="/image/upload" id="btn" class="btn waves-effect waves-light right " type="submit" name="action">Siguiente
@@ -72,9 +72,26 @@
       <button (click)="removeTask(task)" id="btn"  type="submit" class="btn waves-effect waves-light orange right">Guardar
         <i class="material-icons">add_circle</i>
       </button>
+      
+      
+       
      
-  </form>
+      <br>
+      <br>
+      
+      </form>
+      
+        
+      </div>
+   
   </div>
 </div>
 
-<app-caracteristicas></app-caracteristicas>
+
+
+<br>
+<br>
+<br>
+<br>
+
+

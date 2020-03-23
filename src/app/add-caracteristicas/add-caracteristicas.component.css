@@ -1,3 +1,19 @@
 #btn{
     margin: 4px;
 }
+.card{
+	background-image: url("../../assets/img/4.jpg") ;
+	width: auto;
+}
+.container{
+	background-color: rgba(0,180,0,0.5);
+}
+
+label{
+    font-weight: bold;
+    color: white;
+    size: 80px;
+}
+input{
+    background-color: white;
+}
