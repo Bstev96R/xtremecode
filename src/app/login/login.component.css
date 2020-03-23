@@ -3,3 +3,8 @@ body{
     background-attachment: fixed;
     
 }
+
+div .container
+{
+    opacity: 1.0;
+}

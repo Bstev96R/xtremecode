@@ -1,28 +1,30 @@
-<span class=" card-oferta" style="color: black;">&emsp;&emsp;&nbsp;&nbsp;&nbsp;Oferta de subasta actual: $ {{pre}}</span>
+<h5 class=" card-oferta">
+  &emsp;&emsp;&nbsp;&nbsp;&nbsp;Oferta de subasta actual: $ {{ pre }}
+</h5>
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+  <input
+    type="hidden"
+    name="id"
+    #id="ngModel"
+    [(ngModel)]="service.formData.id"
+  />
   <div class="counter-wrapper">
     <app-timer #counter></app-timer>
-    </div>
-    <div   style="color: black;">{{counterState}}</div>
-  
-    <div *ngIf="counterState=='cronometro de subasta' ; else validacion">
-      <div class="form-group">
-        <input  name="oferta" #oferta="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="Oferta">
-        <div *ngIf="oferta.value== ''; else denegar" ></div>
-        <ng-template #denegar>
-          <div *ngIf="oferta.value< '350'" class="validation-error">Requiere una cantidad mayor</div>
+  </div>
+  <div style="color: black;">{{ counterState }}</div>
 
-        </ng-template>
-      </div>
-    
-  
-    
-      <div class="form-group">
-       
-        <button  type="submit"  class="btn btn-lg btn-block btn-info">Ofertar</button>
-      </div>
+  <div *ngIf="counterState == 'cronometro de subasta'; else validacion">
+    <div class="form-group">
+      <input name="oferta" #oferta="ngModel"[(ngModel)]="service.formData.oferta"class="form-control"placeholder="Ofertase"/>
+     
+      <div *ngIf="oferta.value == ''; else denegar"></div>
+      <ng-template #denegar>
+        <div *ngIf="oferta.value < '350'" class="validation-error">
+          Requiere una cantidad mayor
+        </div>
+      </ng-template>
     </div>
+<<<<<<< HEAD
     <ng-template #validacion>
       <div class="form-group">
         <input name="oferta" #oferta="ngModel" [(ngModel)]="service.formData.oferta" class="form-control" placeholder="Oferta">
@@ -39,11 +41,37 @@
     
 
   
+=======
+>>>>>>> 9951fd8b3288e718cc2058960d6eb868bc73823b
 
+    <div class="form-group">
+      <button type="submit" class="btn btn-lg btn-block btn-info">
+        Ofertar
+      </button>
+    </div>
+  </div>
+  <ng-template #validacion>
+    <div class="form-group">
+      <input
+        name="oferta"
+        #oferta="ngModel"
+        [(ngModel)]="service.formData.oferta"
+        class="form-control"
+        placeholder="Oferta"
+      />
+    </div>
 
+    <div class="form-group">
+      <button type="submit" class="btn btn-lg btn-block btn-info" disabled>
+        Ofertar
+      </button>
+    </div>
+  </ng-template>
 </form>
 <div class="card-action">
-  <a class="blue-text">oferta mayor: {{ofertaM}}</a>
-  <a href="#" routerLink="/employeelist" class="blue-text">Historial de ofertas</a>
-  <a  class="blue-text">Total de ofertas: {{cont}}</a>
+  <a style="font-family: 'Roboto Condensed', sans-serif;" class="blue-text">oferta mayor: {{ ofertaM }}</a>
+  <a style="font-family: 'Roboto Condensed', sans-serif;" href="#" routerLink="/employeelist" class="blue-text"
+    >Historial de ofertas</a
+  >
+  <a style="font-family: 'Roboto Condensed', sans-serif;" class="blue-text">Total de ofertas: {{ cont }}</a>
 </div>
