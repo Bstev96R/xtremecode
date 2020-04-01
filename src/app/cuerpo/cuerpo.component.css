@@ -18,4 +18,118 @@
 p{
     text-align: justify;
 }
+.brand-promotion {
+    top:600px;
+    left: 0;
+    position: absolute;
+    right: 15px;
+    color:#fff;
+    z-index:999999;
+}
 
+.brand-content {
+    background-color:rgba(217, 151, 35, 0.85);
+    padding: 30px 32px;
+    font-size: 14px;
+    margin-right: -25px;
+}
+
+.brand-content h2 {
+    text-transform: capitalize;
+}
+
+.brand-content:hover {
+    background-color:rgba(109, 75, 16, 0.85);
+}
+
+.brand-content img {
+    margin-right: 15px;
+    margin-top: 15px;
+}
+/*	################################################################
+	4. ABOUT SECTION
+    ################################################################# */
+ 
+	
+	.about-wrapper {
+		display: block;
+		padding: 50px 0;
+		position: relative;
+		background-color: #FFF;
+	}
+	
+	.about-box img {
+		padding-bottom:15px;
+		
+		}
+	.about-box {
+		margin:40px 0;
+		color: black;
+		padding:0;
+	}
+	
+	.about-box h3 {
+		margin:20px 0;
+		font-size:16px;
+		text-transform:uppercase;
+		color:#3C3B3B;
+		font-weight:500;
+	}
+	
+	.how-box img {
+		padding: 15px;
+		}
+	
+	.how-box {
+		margin:60px 40px 0;
+		color:#999999;
+		padding:0;
+	}
+	
+	.how-box-head {
+		margin:40px 0;
+		color:#999999;
+		padding:0;
+	}
+	
+	.how-box h3 {
+		margin:10px 0;
+		font-size:16px;
+		text-transform:uppercase;
+		color:#3C3B3B;
+		font-weight: 700;
+	}
+	
+	.how-box-head h2 {
+		margin: 0px 0;
+		font-size: 22px;
+		color: #3C3B3B;
+		font-weight: 600;
+		
+	}
+	
+	.how-box-head.makebg1 {
+		padding:32px;
+		height:300px;
+		margin:10px !important;
+		
+	}
+	
+	.how-box-head.makebg2 {
+		padding:32px;
+		height:300px;
+		margin:10px !important;
+		
+	}
+	
+	.how-box-head h3 {
+		margin: 0px 0;
+		font-size: 16px;
+		color: #F7C221;
+		font-weight: 500;
+	}
+	
+	.about-border .fa {
+	font-size: 40px;
+	color: #F7C221;
+	}
