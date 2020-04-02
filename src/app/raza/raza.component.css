@@ -28,7 +28,7 @@ section .slide
     background: #0f0;
     height: 100%;
     flex: 1;
-    border-right: 2px solid #000;
+    border-right: 3px solid #000;
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
