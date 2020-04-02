@@ -22,7 +22,6 @@ button
 {
     font-family: 'Roboto Condensed', sans-serif;
 }
-img
-{
-   
+.image{
+    background-image: url("../../assets/img/4.jpg");
 }

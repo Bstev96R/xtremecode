@@ -1,0 +1,58 @@
+/*	################################################################
+	5. SERVICE SECTION
+	################################################################# */	
+	
+	.service-box img {
+		padding-right:15px;
+		margin-right:5px;
+	}
+	.service-box {
+		margin:40px 0;
+		color:#999999;
+		padding:0;
+	}
+	
+	.service-box p {
+		padding-left: 80px;
+		margin-top: -10px;
+	}
+	
+	.service-box h3 {
+		margin: 20px 0;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: #3C3B3B;
+		font-weight: 500;
+		padding-left: 80px !important;
+	}
+	
+	#testimonials .item{
+		background: #3fbf79;
+		padding: 30px 0px;
+		margin: 10px;
+		color: #FFF;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		text-align: center;
+	}
+	.customNavigation{
+		text-align: center;
+	 }
+	.customNavigation a{
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	
+	.service-border .fa {
+		font-size: 40px;
+		color: #F7C221;
+        }
+blockquote{
+        color: black;
+        size: 30px;
+}

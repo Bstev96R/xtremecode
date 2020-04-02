@@ -1,6 +1,6 @@
 <div class="card" style="padding-top: 110px;">
   <div class="content">
-    <span class="title">Registro Bovino</span>
+    <h1 class="title">Registro Bovino</h1>
     <div class="container">
       <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm">
       <div class="form-row">
@@ -62,7 +62,7 @@
         </div>
          <div class="form-group col-md-12">
           <label for="inputPassword4">Descripción</label>
-          <input [(ngModel)]="caracteristicas.Descripcion" #Descripcion="ngModel" type="text" class="form-control" id="Antecedentes" name="Antecedentes" placeholder="Antecedentes">
+          <input class="" [(ngModel)]="caracteristicas.Descripcion" #Descripcion="ngModel" type="text" class="form-control" id="Antecedentes" name="Antecedentes" placeholder="Antecedentes">
         </div>
       </div>
       <button  routerLink="/image/upload" id="btn" class="btn waves-effect waves-light right " type="submit" name="action">Siguiente
@@ -76,8 +76,6 @@
       
        
      
-      <br>
-      <br>
       
       </form>
       
@@ -89,9 +87,5 @@
 
 
 
-<br>
-<br>
-<br>
-<br>
 
 

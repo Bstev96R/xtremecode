@@ -4,28 +4,31 @@
 <br>
 <br>
 <br>
-<br>
 
 
 
-<div class="container"  *ngIf="!paidFor">
+<div class="image">
+  <br>
+  <div class="container"  *ngIf="!paidFor">
 
-  <h1 class="card">Suscripción mensual - ${{ product.price }}</h1>
-
-  <h4>{{ product.description }}</h4>
-
-  <img style="margin-left: 30%;" width="400" [src]="product.img">
-
-</div>
-
-<div *ngIf=paidFor>
-  <h1>Yay, you bought a sweet couch!</h1>
-
-  <img src="assets/giphy.gif">
-</div>
-
-
-<div style="margin-left: 23%; border-radius: 15px;" [hidden]="paidFor" #paypal></div>
-<div>
-  <button routerLink="/crud2" style="width: 50%; margin-left: 26%;" type="button" class="btn btn-primary btn-lg btn-block">Siguiente</button>
+    <h1 class="card">Publica tu ganado a tan solo: - ${{ product.price }}</h1>
+  
+    <h4>{{ product.description }}</h4>
+  
+    <img style="margin-left: 30%;" width="400" [src]="product.img">
+  
+  </div>
+  
+  <div *ngIf=paidFor>
+    <h1>Yay, you bought a sweet couch!</h1>
+  
+    <img src="assets/giphy.gif">
+  </div>
+  
+  
+  <div style="margin-left: 23%; border-radius: 15px;" [hidden]="paidFor" #paypal></div>
+  <div>
+    <button routerLink="/crud2" style="width: 50%; margin-left: 26%;" type="button" class="btn btn-primary btn-lg btn-block">Siguiente</button>
+  </div>
+  <br>
 </div>

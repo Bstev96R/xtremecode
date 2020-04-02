@@ -10,8 +10,8 @@ export class PaymeComponent implements OnInit {
   @ViewChild('paypal') paypalElement: ElementRef;
 
   product = {
-    price: 20.00,
-    description: 'Obtén el plan y disfruta todos sus beneficios',
+    price: 5.83,
+    description: 'Disfruta todos los  beneficios de SuGaNic',
     img: '../../assets/img/log.jpg'
   };
   paidFor=false;

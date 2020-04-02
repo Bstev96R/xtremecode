@@ -15,5 +15,6 @@ label{
     size: 80px;
 }
 input{
-    background-color: white;
+ border-color: black ;
 }
+::-webkit-input-placeholder { color:black; }
