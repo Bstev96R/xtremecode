@@ -11,9 +11,10 @@
 <br>
 <br>
 
+
 <h2>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Oferta ganadora fue del Usuario:  </h2>
 <div *ngFor="let x of list">
-<div *ngIf="x.oferta=='500'; else opcion">
+<div *ngIf="x.oferta=='500' ; else opcion">
   <h3>&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;{{x.fullName}} con $ {{x.oferta}}</h3>
  
   
@@ -26,10 +27,15 @@
   </div>
 </ng-template>
 </div>
-<div>
+<div style="visibility: hidden;">{{user.name}}</div>
+<div *ngIf="user.name =='Steven Tellez'; else opcion2">
   <button routerLink="/paymeS" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-primary btn-lg btn-block">Pagar</button>
   <button routerLink="/carven" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-secondary btn-lg btn-block">Generar carta de venta</button>
 </div>
+<ng-template #opcion2>
+  <button routerLink="/paymeS" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-primary btn-lg btn-block" disabled>Pagar</button>
+  <button routerLink="/carven" style="width: 50%; margin-left: 30%;" type="button" class="btn btn-secondary btn-lg btn-block" disabled>Generar carta de venta</button>
+</ng-template>
 <br>
 <br>
 <br>
