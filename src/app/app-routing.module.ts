@@ -27,9 +27,15 @@ import {EmployeeComponent} from "./employees/employee/employee.component";
 import {EmployeeListComponent} from "./employees/employee-list/employee-list.component";
 import {PaymeComponent} from './payme/payme.component';
 import {PaymeSComponent} from './payme-s/payme-s.component';
+import {ValorMComponent} from './valor-m/valor-m.component';
 
 
 export const routes: Routes = [
+  {
+    path:"valorM",
+    component: ValorMComponent
+
+  },
   {
     path:"paymeS",
     component: PaymeSComponent

@@ -61,6 +61,8 @@ import{EmployeeListComponent} from "./employees/employee-list/employee-list.comp
 import { EmployeeService } from "./shared/employee.service";
 import {PaymeComponent} from './payme/payme.component';
 import {PaymeSComponent} from './payme-s/payme-s.component';
+import {ValorMComponent} from './valor-m/valor-m.component';
+ 
 
 
 
@@ -104,7 +106,8 @@ import {PaymeSComponent} from './payme-s/payme-s.component';
     PaymeComponent,
     CarrbanComponent,
    RegresiveComponent,
-   PaymeSComponent
+   PaymeSComponent,
+   ValorMComponent
   ],
   imports: [
     BrowserModule,
