@@ -8,12 +8,12 @@
     #id="ngModel"
     [(ngModel)]="service.formData.id"
   />
-  <div class="counter-wrapper">
+  <div class="counter-wrapper" >
     <app-timer #counter></app-timer>
   </div>
   <div style="color: black;">{{ counterState }}</div>
 
-  <div *ngIf="counterState == 'cronómetro de subasta'; else validacion">
+  <div *ngIf="counterState == 'cronómetro de subasta'; else validacion" >
     <div class="form-group">
       <input name="oferta" #oferta="ngModel"[(ngModel)]="service.formData.oferta"class="form-control"placeholder="Ofertas"/>
      
