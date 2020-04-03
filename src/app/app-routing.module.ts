@@ -43,7 +43,7 @@ export const routes: Routes = [
   },
   {
    path:"payme",
-   component: PaymeComponent
+   component: PaymeComponent, canActivate: [AuthGuard]
   },
   {
     path:"employees",
