@@ -20,7 +20,7 @@ export class RegresiveComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let date = new Date("2020-03-05");
+    let date = new Date("2020-04-10");
     this.timerId =countdown(date, (ts)=>{
       this.time = ts;
     }, countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS)

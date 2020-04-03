@@ -13,9 +13,9 @@
   </div>
   <div style="color: black;">{{ counterState }}</div>
 
-  <div *ngIf="counterState == 'cronometro de subasta'; else validacion">
+  <div *ngIf="counterState == 'cronómetro de subasta'; else validacion">
     <div class="form-group">
-      <input name="oferta" #oferta="ngModel"[(ngModel)]="service.formData.oferta"class="form-control"placeholder="Ofertase"/>
+      <input name="oferta" #oferta="ngModel"[(ngModel)]="service.formData.oferta"class="form-control"placeholder="Ofertas"/>
      
       <div *ngIf="oferta.value == ''; else denegar"></div>
       <ng-template #denegar>

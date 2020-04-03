@@ -17,7 +17,7 @@ export class EmployeeComponent implements OnInit {
   @ViewChild("counter", { read: TimerComponent })
   private counter: TimerComponent;
 
-  counterState = "cronometro de subasta";
+  counterState = "cronómetro de subasta";
 
   comp: string;
   displayForm: boolean = false;
