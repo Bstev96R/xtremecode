@@ -2,7 +2,7 @@
   <div class="content">
     <h1 class="title">Registro Bovino</h1>
     <div class="container">
-      <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm">
+      <form (ngSubmit)="onGuardarCaracteristicas(formNew)" #formNew="ngForm" autocomplete="off">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Raza</label>
@@ -28,10 +28,11 @@
           <select [(ngModel)]="caracteristicas.Departamento" #Departamento="ngModel" id="Departamento" name="Departamento" class="form-control">
             <option selected></option>
             <option>Chontales</option>
-             <option>...</option>
-              <option>...</option>
-               <option>...</option>
-          </select>
+             <option>Managua</option>
+              <option>Granada</option>
+               <option>Masaya</option>
+               <option>León</option>    
+              </select>
         </div>
       
         <div class="form-group col-md-4">
@@ -39,9 +40,15 @@
           <select  [(ngModel)]="caracteristicas.Municipio" #Municipio="ngModel" id="Municipio" name="Municipio" class="form-control">
             <option selected></option>
             <option>juigalpa</option>
-            <option>...</option>
-            <option>...</option>
-            <option>...</option>
+            <option>Acoyapa</option>
+            <option>Cuapa</option>
+            <option>Santo Domingo</option>
+            <option>Comalapa</option>
+            <option>La libertad</option>
+            <option>Santo Tomás</option>
+            <option>San Pedro de Lovago</option>
+            <option>Villa Sandino</option>
+
           </select>
         </div>
       
